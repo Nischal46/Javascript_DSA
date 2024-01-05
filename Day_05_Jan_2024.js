@@ -69,16 +69,27 @@ switch(userinput){
         break;
 
 
-    // case 4:
-    //     console.log("You have choosen for the operation of the merging of the multiple array");
+    case 4:
+        console.log("You have choosen for the operation of the merging of the multiple array");
 
-    //     const arrayOne = [];
+        const arrayOne = [];
 
-    //     const arrayTwo = [];
+        const arrayTwo = [];
 
-    //     for(let i = 0; i<= 4; i++ ){
-    //         const inputarray1 = +readlinesync.question("Enter")
-    //         arrayOne[i] = 
-    //     }
+        let arraythree = [];
+
+        for(let i = 0; i<= 2; i++ ){
+            const inputarray1 = +readlinesync.question("Enter element in array one: ")
+            arrayOne.push(inputarray1)
+        }
+
+        for(let i = 0; i<= 2; i++ ){
+            const inputarray2 = +readlinesync.question("Enter element in array two: ")
+            arrayTwo.push(inputarray2);
+        }
+
+        
+        console.log(arrayOne, arrayTwo);
+        arraythree = [...arrayOne, ...arrayTwo]
 
 }
