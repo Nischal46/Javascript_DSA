@@ -8,6 +8,7 @@ console.log('The initial array data is ', array);
 console.log(`
 --> Press 1 to arrange the array data in ascending order
 --> Press 2 to arrange the array data in descending order
+--> Press 3 to insert the element in the array
 `)
 
 const userChoice = +readlinesync.question('Enter what you want to perform: ')
@@ -42,6 +43,26 @@ switch(userChoice){
 
             console.log('Arranging array data in descending order: ', array);
 
+            break;
+
+
+        case 3:
+            const newElement = +readlinesync.question("Enter the element that need to be added: ");
+            const arrayPosition = +readlinesync.question("Enter a position of the array where the new wlement is to be inserted: ");
+
+            for(let i = array.length - 1; i >= 0; i--){
+
+                if(i>=arrayPosition){
+                    array[i + 1] = array[i];
+
+                    if(i === arrayPosition){
+                        array[i] = newElement;
+                    }
+                }
+
+            }
+
+            console.log(`The initial array after the inserting of the element ${newElement} at the position of ${arrayPosition} is: `, array);
             break;
 
         default:
