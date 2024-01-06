@@ -50,17 +50,41 @@ switch(userChoice){
             const newElement = +readlinesync.question("Enter the element that need to be added: ");
             const arrayPosition = +readlinesync.question("Enter a position of the array where the new wlement is to be inserted: ");
 
-            for(let i = array.length - 1; i >= 0; i--){
+            console.log(`
+            --> Press 1 to perform through logic method
+            --> Press 2 to perform through javaScript built in splice method
+            `)
+            const insertionChoice = +readlinesync.question("Enter the insertion method: ");
 
-                if(i>=arrayPosition){
-                    array[i + 1] = array[i];
+            switch(insertionChoice){
+                case 1:
+                    for(let i = array.length - 1; i >= 0; i--){
 
-                    if(i === arrayPosition){
-                        array[i] = newElement;
+                        if(i>=arrayPosition){
+                            array[i + 1] = array[i];
+        
+                            if(i === arrayPosition){
+                                array[i] = newElement;
+                            }
+                        }
+        
                     }
-                }
+                    console.log('Perform through logical method');
+                    break;
 
+                case 2:
+                    array.splice(arrayPosition, 0, newElement);
+                    console.log("Perform through javaScript built in splice method")
+                    break;
+
+                default:
+                    console.log("Invalid option");
+                    break;
             }
+
+ 
+
+            
 
             console.log(`The initial array after the inserting of the element ${newElement} at the position of ${arrayPosition} is: `, array);
             break;
