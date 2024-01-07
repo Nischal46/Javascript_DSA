@@ -122,44 +122,56 @@ switch(userChoice){
 
         const searchChoice = +input.question("Enter choice of search: ");
 
-        switch(searchChoice){
-            case 1:
-                const searchName =  input.question("Enter the field that need to be search: ");
+        function Searchcategories(field, searchinput){
+            log(field, searchinput);
+            for(let i = 0; i<person.length; i++){
+                if(field === "age"){
+                    const fieldValue = person[i].age;
 
-                for(let i = 0; i<person.length; i++){
-                    if(person[i].name === searchName){
+                    if(fieldValue === searchinput){
                         searchOutput.push(person[i]);
                     }
-                    
                 }
-        
-                log(`The search data of the field ${searchName} in the list of array is `, searchOutput);
+               else{
+                const fieldValue = person[i][field].toLowerCase();
+                if(fieldValue.includes(searchinput)){
+                    searchOutput.push(person[i]);
+                }
+               }
+                
+            }
+    
+            log(`The search data of the field ${searchinput} in the list of array is `, searchOutput);
+        }
+
+        switch(searchChoice){
+            case 1:
+                const searchName =  input.question("Enter the name that need to be search: ");
+
+                Searchcategories("name", searchName.toLowerCase())
                 break;
 
             case 2:
-                const searchAge =  +input.question("Enter the field that need to be search: ");
+                const searchAge =  +input.question("Enter the age that need to be search: ");
 
-                for(let i = 0; i<person.length; i++){
-                    if(person[i].age === searchAge){
-                        searchOutput.push(person[i]);
-                    }
-                    
-                }
-        
-                log(`The search data of the field ${searchAge} in the list of array is `, searchOutput);
+                Searchcategories("age", searchAge)
                 break;
 
             case 3:
-                const searchDegree =  input.question("Enter the field that need to be search: ");
+                const searchDegree =  input.question("Enter the education degree that need to be search: ");
 
-                for(let i = 0; i<person.length; i++){
-                    if(person[i].education === searchDegree){
-                        searchOutput.push(person[i]);
-                    }
-                    
-                }
-        
-                log(`The search data of the field ${searchDegree} in the list of array is `, searchOutput);
+                Searchcategories("education", searchDegree.toLowerCase());
+                break;
+
+            case 4:
+                const searchProfession = input.question("Enter the profession that need to be searched: ");
+
+                Searchcategories("profession", searchProfession.toLowerCase());
+
+                break;
+
+            default:
+                log("Invalid input search");
                 break;
 
         }
