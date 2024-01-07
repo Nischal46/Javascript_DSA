@@ -178,6 +178,18 @@ switch(userChoice){
        
         break;
 
+    case 3:
+        const deleteId = +input.question("Enter the id to delete the data: ");
+
+        for(let i = 0; i < person.length; i++){
+            if(person[i].id === deleteId){
+                person.splice(i, 1);
+            }
+        }
+
+        log(`The array after the deletion of ${deleteId} is `, person);
+        break;
+
     default:
         log('Invalid Input. Please give correct input');
         break;
