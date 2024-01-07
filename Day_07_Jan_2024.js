@@ -18,7 +18,7 @@ const person = [
         name: "Arijit Singh",
         age: 37,
         education: "Master",
-        profession: "Singer"
+        profession: "Software DeveloperS"
     },
 
     {
@@ -26,7 +26,7 @@ const person = [
         name: "Paras Thakuri",
         age: 24,
         education: "Higher Education",
-        profession: "Soldier"
+        profession: "Graphic Designer"
     },
 
     {
@@ -34,7 +34,7 @@ const person = [
         name: "Suresh Bhattarai",
         age: 23,
         education: "Bachelor",
-        profession: "Software Developer"
+        profession: "Backend Developer"
     },
 
     {
@@ -60,8 +60,8 @@ log('The initial array of the person is ', person)
 
 log(`
 --> Press 1 to insert new student detail in the array
---> Press 2 to delete existing student detail from the array
---> Press 3 to search the student detail
+--> Press 2 to search the student detail
+--> Press 3 to delete existing student detail from the array
 --> Press 4 to sort the student details
 `)
 
@@ -109,6 +109,61 @@ switch(userChoice){
 
                 break;
         }
+        break;
+
+    case 2:
+        log(`
+        Search interms of
+        --> Press 1 to search according to person name 
+        --> Press 2 to search according to person age
+        --> Press 3 to search according to person education degree
+        `)
+        let searchOutput = [];
+
+        const searchChoice = +input.question("Enter choice of search: ");
+
+        switch(searchChoice){
+            case 1:
+                const searchName =  input.question("Enter the field that need to be search: ");
+
+                for(let i = 0; i<person.length; i++){
+                    if(person[i].name === searchName){
+                        searchOutput.push(person[i]);
+                    }
+                    
+                }
+        
+                log(`The search data of the field ${searchName} in the list of array is `, searchOutput);
+                break;
+
+            case 2:
+                const searchAge =  +input.question("Enter the field that need to be search: ");
+
+                for(let i = 0; i<person.length; i++){
+                    if(person[i].age === searchAge){
+                        searchOutput.push(person[i]);
+                    }
+                    
+                }
+        
+                log(`The search data of the field ${searchAge} in the list of array is `, searchOutput);
+                break;
+
+            case 3:
+                const searchDegree =  input.question("Enter the field that need to be search: ");
+
+                for(let i = 0; i<person.length; i++){
+                    if(person[i].education === searchDegree){
+                        searchOutput.push(person[i]);
+                    }
+                    
+                }
+        
+                log(`The search data of the field ${searchDegree} in the list of array is `, searchOutput);
+                break;
+
+        }
+       
         break;
 
     default:
