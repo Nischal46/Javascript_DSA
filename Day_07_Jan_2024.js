@@ -190,6 +190,50 @@ switch(userChoice){
         log(`The array after the deletion of ${deleteId} is `, person);
         break;
 
+    case 4:
+        log(`
+        *************Sorting****************
+        Press 1 to sort data in ascending oder
+        Press 2 to sort data in descending order
+        `)
+        const sortingChoice = +input.question("Enter a choice of sorting of the array: ")
+
+        switch(sortingChoice){
+            case 1:
+                for (let i=0; i<person.length - 1; i++){
+                    for (let j=0; j<person.length - 1; j++){
+                        if(person[j].age>person[j+1].age){
+                            let temp = person[j];
+                            person[j] = person[j + 1];
+                            person[j + 1] = temp;
+                        }
+                    }
+                }
+
+                log("Array sorting in ascending order: ", person)
+                break;
+
+            case 2:
+                for (let i = 0; i<person.length - 1; i++){
+                    for(let j = 0; j<person.length - 1; j++){
+                        if(person[j].age<person[j+1].age){
+                            let temp = person[j];
+                            person[j] = person[j +1];
+                            person[j + 1] = temp;
+                        }
+                    }
+            
+                }
+
+                log("Array sorting in descending order: ", person)
+                break;
+
+            default:
+                log("Invalid sorting option input");
+                break;
+        }
+        break;
+
     default:
         log('Invalid Input. Please give correct input');
         break;
