@@ -39,3 +39,15 @@ let employee = [
 
 employee.sort((a,b) => a.name.localeCompare(b.name));
 console.log(employee);
+
+// recursion
+function RecursionConcept(looping){
+console.log('This is the recursion function concept', looping);
+
+if(looping < 10){
+    RecursionConcept(looping + 1);
+}
+}
+
+let turn = 0;
+RecursionConcept(turn)
