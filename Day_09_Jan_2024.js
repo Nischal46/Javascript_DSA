@@ -12,6 +12,30 @@ for(let i = 0; i<= array.length - 1; i++){
     }
 }
 
-
-
 console.log(array);
+
+//using sort built in method
+
+let studentName = ['sabin', 'aman', 'hari', 'david', 'loken', 'guruman'];
+
+studentName.sort();
+
+console.log(studentName);
+
+let employee = [
+    {
+        name: 'kushal',
+        profession: 'Graphic designer'
+    },
+    {
+        name: 'amar',
+        profession: 'Frontend developer'
+    },
+    {
+        name: 'babin',
+        profession: 'Backend developer'
+    }
+];
+
+employee.sort((a,b) => a.name.localeCompare(b.name));
+console.log(employee);
