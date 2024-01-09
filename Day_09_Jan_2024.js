@@ -1,53 +1,38 @@
-let array = ['nischal', 'bibek', 'asmita', 'parina', 'roshni'];
+let arrayNumber = [2,4,1,5,9,6];
+console.log('The initial array is ', arrayNumber);
+
+const flatarraymap = arrayNumber.flatMap(x => x*3);
+
+console.log('Flat map array of the initial array multiply by 3 is , ', flatarraymap);
+
+const sorting = arrayNumber.sort();
+
+console.log('The flat map array after sorting in ascending order is ', sorting);
+
+const number = 'loop concept';
+const reversenumber = number.split('').reverse().join('');
+
+console.log(reversenumber);
+
+// for(let i = 0; i<number.length; i++){
+//     const spe = number.charAt(i);
+//     console.log(spe);
+// }
 
 
-//arranging array in ascending order
-for(let i = 0; i<= array.length - 1; i++){
-    for (let j = 0; j<=array.length - 1; j++){
-        if(array[j]> array[j+1]){
-            let temp = array[j];
-            array[j] = array[j+1];
-            array[j+1] = temp;
-        }
+//using for loop concept
+
+function reversreString(inputName){
+    let reverseName = '';
+
+    for(let i = inputName.length - 1; i>=0; i--){
+        reverseName += inputName[i]
     }
+
+    return reverseName;
 }
 
-console.log(array);
+const personName = 'Samantha Prabhu';
+const reversreStringOutput = reversreString(personName);
+console.log(reversreStringOutput);
 
-//using sort built in method
-
-let studentName = ['sabin', 'aman', 'hari', 'david', 'loken', 'guruman'];
-
-studentName.sort();
-
-console.log(studentName);
-
-let employee = [
-    {
-        name: 'kushal',
-        profession: 'Graphic designer'
-    },
-    {
-        name: 'amar',
-        profession: 'Frontend developer'
-    },
-    {
-        name: 'babin',
-        profession: 'Backend developer'
-    }
-];
-
-employee.sort((a,b) => a.name.localeCompare(b.name));
-console.log(employee);
-
-// recursion
-function RecursionConcept(looping){
-console.log('This is the recursion function concept', looping);
-
-if(looping < 10){
-    RecursionConcept(looping + 1);
-}
-}
-
-let turn = 0;
-RecursionConcept(turn)
