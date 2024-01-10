@@ -54,4 +54,10 @@ for(let i = studentarray.length - 1; i >= 0; i--){
 
 console.log(studentarray);
 
+let newarray = [12,43,65,35,76,87];
+
+newarray.splice(3, 0, 'lucky seven');
+
+console.log(newarray);
+
 
