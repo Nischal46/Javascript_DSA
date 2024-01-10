@@ -36,7 +36,7 @@ const finallyreversed = reverseArray(arraytoreverse);
 
 console.log(finallyreversed);
 
-insertion of the array
+
 
 let studentarray = ['ram', 'hari', 'laxman', 'sudama'];
 
