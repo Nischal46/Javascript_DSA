@@ -20,10 +20,11 @@ console.log(stringtoReversed);
 
 function reverseArray(parameterArray){
     let newArray = [];
-
+    let count = 0;
     for(let i = parameterArray.length - 1; i>=0; i--){
-        console.log(i);
-        newArray.push(parameterArray[i]);
+        // newArray.push(parameterArray[i]);
+        newArray[count] = parameterArray[i];
+        count++;
     }
 
     return newArray;
@@ -34,5 +35,23 @@ const arraytoreverse = ['hello', 'from', 'another', 'side'];
 const finallyreversed = reverseArray(arraytoreverse);
 
 console.log(finallyreversed);
+
+insertion of the array
+
+let studentarray = ['ram', 'hari', 'laxman', 'sudama'];
+
+for(let i = studentarray.length - 1; i >= 0; i--){
+    if(i >= 1){
+        studentarray[i + 1] = studentarray[i];
+
+        if(i == 1){
+            studentarray[i] = 'krishna'
+        }
+
+    }
+
+}
+
+console.log(studentarray);
 
 
