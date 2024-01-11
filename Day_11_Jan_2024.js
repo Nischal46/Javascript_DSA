@@ -75,6 +75,19 @@ switch(operation){
         console.log("The array after the deletion of the data of the specific index is ", studentMarks);
         break;
 
+    case 3:
+        const searchelement = readlineSync.question("Enter a name that need to be search: ");
+        let result;
+        for(let i = 0; i <= studentMarks.length-1; i++){
+            if(studentMarks[i].name === searchelement){
+                result = studentMarks[i];
+                break;
+            }
+        }
+
+        log('Search result, ', result);
+        break;
+
     default:
         log("Invalid input. Please choose correct");
         break;
