@@ -62,20 +62,45 @@ function DisplayAnswer(answerlist){
     }
 }
 
+let countPoint = 0;
+
 function QuestionGenerater(arrayQuestion, questionNo){
 
+    log(`
+    `)
     log(`${questionNo}) ${arrayQuestion.question}`);
     DisplayAnswer(arrayQuestion.option)
     const answer = +readlinesync.question('Choose a correct option: ');
 
     if(answer === arrayQuestion.correct){
         log(`${colors.green}Correct Answer${colors.reset}`);
+        countPoint += arrayQuestion.point;
+        log(`${colors.green}Point: ${countPoint}${colors.reset}`)
     }
     else{
         log(`${colors.red}Wrong Answer${colors.reset}`);
+        log(`${colors.green}Point: ${countPoint}${colors.reset}`)
     }
 }
 
 for(let i = 0; i <= questionSet.length - 1; i++){
     QuestionGenerater(questionSet[i], i+1);
 }
+
+function GameEnd(){
+
+    log(`
+    
+    `);
+
+    if(countPoint === 50) log(`${colors.yellow}Excellent${colors.reset}. You scored ${countPoint}/50`);
+
+    else if(countPoint === 40)  log(`${colors.yellow}Very Good${colors.reset}. You scored ${countPoint}/50`);
+
+    else if(countPoint === 30)  log(`${colors.green}Good${colors.reset}. You scored ${countPoint}/50`);
+
+    else log(`${colors.red}Try again${colors.reset}. You scored ${countPoint}/50`)
+
+}
+
+GameEnd()
