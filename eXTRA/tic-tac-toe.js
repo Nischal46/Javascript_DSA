@@ -40,7 +40,8 @@ function inputUser(player){
     const boardInput = +input.question(`${colors.yellow}Enter a position of board: ${colors.reset}`);
 
     function CheckEmpty(player, a1, a2){
-        if(player === 'player1'){
+       if(board[a1][a2] === ""){
+           if(player === 'player1'){
             board[a1][a2] = 'X'
             flag = false
            }
@@ -48,6 +49,13 @@ function inputUser(player){
             board[a1][a2] = 'O';
             flag = true;
             }
+            
+       }
+
+       else{
+        log(`${colors.red}Already filled this place. Please choose different.${colors.reset}`);
+        inputUser(player);
+       }
     }
 
     switch(boardInput){
