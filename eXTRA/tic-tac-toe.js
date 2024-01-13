@@ -54,6 +54,7 @@ function inputUser(player){
 
        else{
         log(`${colors.red}Already filled this place. Please choose different.${colors.reset}`);
+        DisplayBoard();
         inputUser(player);
        }
     }
@@ -97,6 +98,7 @@ function inputUser(player){
 
         default:
             log('Invalid Input. Please give correct input');
+            DisplayBoard();
             inputUser(player);
             break;
     }
