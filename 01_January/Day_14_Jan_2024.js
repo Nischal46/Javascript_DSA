@@ -1,0 +1,65 @@
+//Learning DSA Day 14
+
+//adding student data in existed array
+//deleting the student data from the array
+//search the student data feom the array
+//sort the student data from the array
+
+const input = require('readline-sync');
+const {log} = require('console');
+
+const array = [
+    {
+        name: 'Shailesh',
+        percentage: 80,
+        division: 'distinction'
+    },
+
+    {
+        name: 'Pratik',
+        percentage: 78,
+        division: 'first'
+    },
+
+    {
+        name: 'Nima',
+        percentage: 66,
+        division: 'first'
+    },
+
+    {
+        name: 'Rupa',
+        percentage: 59,
+        division: 'second'
+    }
+]
+
+log('The initial array of the student is ', array);
+
+const operation = +input.question('Enter the choice of the operation: ');
+
+switch(operation){
+    case 1:
+        let i = array.length - 1;
+        const newdata = {name: 'Hari prased', percentage: 92, division: 'distinction'};
+        while(i>=0){
+
+            if(i>=0){
+                array[i+1] = array[i];
+                if(i===0){
+                    array[i] = newdata
+                }
+            }
+
+            i--;
+        }
+        log('The array of the student after inserting data is ', array);
+        break;
+
+    default:
+        log('Invalid input. Please give correct input');
+        break;
+
+}
+
+
