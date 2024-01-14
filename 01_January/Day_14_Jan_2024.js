@@ -71,6 +71,22 @@ switch(operation){
         log('The array of the student after the deletion of the details ', array);
         break;
 
+    case 3:
+        let searchIndex = input.question('Enter a division that the students got: ');
+        let searchResult = [];
+        let k = 0;
+        while(k<array.length){
+            if(array[k].division === searchIndex){
+                searchResult = array[k];
+            }
+
+            k++;
+        }
+        log('The array after the searching feature by using the while loop, ', array);
+        break;
+
+    
+
     default:
         log('Invalid input. Please give correct input');
         break;
