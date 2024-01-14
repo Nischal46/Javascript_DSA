@@ -56,6 +56,21 @@ switch(operation){
         log('The array of the student after inserting data is ', array);
         break;
 
+    case 2:
+        let deleteIndex = +input.question("Enter a position of the array that need to be deleted: ");
+
+        let j = deleteIndex;
+
+        while(j<array.length){
+            array[j+1] = array[j];
+
+            array.length = array.length - 1;
+            j++;
+        }
+
+        log('The array of the student after the deletion of the details ', array);
+        break;
+
     default:
         log('Invalid input. Please give correct input');
         break;
