@@ -85,6 +85,20 @@ switch(operation){
         log('The array after the searching feature by using the while loop, ', array);
         break;
 
+    case 4:
+        for(let x = 0; x < array.length - 1; x++){
+            for(let y = 0; y < array.length - 1; y++){
+                if(array[y].percentage > array[y+1].percentage){
+                    let temp = array[y];
+                    array[y] = array[y+1];
+                    array[y+1] = temp;
+                }
+            }
+        }
+
+        console.log("The student array after sorting, ", array);
+        break;
+
     
 
     default:
