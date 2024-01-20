@@ -19,3 +19,6 @@ const newinstruments = instruments.reduce((acc, item) => {
   }, []);
 
 console.log('This is from reduce method', newinstruments);
+
+const compare = instruments.sort((a, b) => a.name.localeCompare(b.name));
+console.log(compare);
