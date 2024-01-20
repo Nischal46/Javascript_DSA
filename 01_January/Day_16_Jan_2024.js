@@ -13,3 +13,9 @@ let newArray = []
 instruments.forEach(items => newArray.push(items.name));
 
 console.table(newArray);
+
+const newinstruments = instruments.reduce((acc, item) => {
+    return acc.concat(item.name); // or using spread operator: return [...acc, item.name];
+  }, []);
+
+console.log('This is from reduce method', newinstruments);
