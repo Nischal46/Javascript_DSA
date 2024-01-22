@@ -14,3 +14,17 @@ console.log(checkarray);
 // indexof
 const name = ['ramesh', 'ravi', 'lal bahadur'];
 console.log(name.indexOf('ravi'))
+
+
+//string useful method
+
+const firstname = "nischal";
+const lastname = "baniya";
+
+const fullname = firstname + lastname;
+console.log(fullname);
+const concat = firstname.concat(" ", lastname);
+console.log(concat);
+
+console.log(fullname.indexOf('s'));
+
