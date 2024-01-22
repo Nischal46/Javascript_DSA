@@ -28,3 +28,19 @@ console.log(concat);
 
 console.log(fullname.indexOf('s'));
 
+//object method
+
+const studentdetails = {
+    physics: 77,
+    chemistry: 67,
+    math: 89,
+    biology: 67
+}
+
+// const convertObjectToArray = Object.entries(studentdetails); this return value with subject
+// const convertObjectToArray = Object.values(studentdetails); this return the second value
+
+const convertObjectToArray = Object.keys(studentdetails); // this return only subject of the object
+
+
+console.log(convertObjectToArray);
