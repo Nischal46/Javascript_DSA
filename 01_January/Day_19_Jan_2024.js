@@ -35,8 +35,8 @@ while(gameStart){
 
             function addstudentDetails(){
                 const name = input.question("Enter student Name: ");
-                const age = +input.question("Enter student Age");
-                const email = input.question("Enter student email address");
+                const age = +input.question("Enter student Age: ");
+                const email = input.question("Enter student email address: ");
 
                 return {name, age, email};
             }
@@ -56,7 +56,19 @@ while(gameStart){
             break;
 
         case 3:
-            log('This is the switch case of the deletion of the array');
+            log('Deletion of the student array');
+            if(studentArray.length < 1){
+                log('Student array is empty');
+            }
+            else{
+                const position = +input.question('Enter a index of the student array to delete: ')
+                for(let i = position; i < studentArray.length; i++){
+                    studentArray[i] = studentArray[i+1];
+
+                    studentArray.length = studentArray.length - 1;
+                }
+            }
+            log('The deletion of the array ', studentArray)
             break;
 
         case 4:
