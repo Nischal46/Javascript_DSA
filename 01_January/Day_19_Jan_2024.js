@@ -31,14 +31,15 @@ while(gameStart){
 
         case 2:
             log('Insertion of the student array');
-            const noOfturn = +input.question('Enter a no of the student details to add');
+            const noOfturn = +input.question('Enter a no of the student details to add: ');
 
             function addstudentDetails(){
+                const id = Math.floor(Math.random() * 4)
                 const name = input.question("Enter student Name: ");
                 const age = +input.question("Enter student Age: ");
                 const email = input.question("Enter student email address: ");
 
-                return {name, age, email};
+                return {id, name, age, email};
             }
 
             for(let i = 0; i < noOfturn; i++){
@@ -72,7 +73,15 @@ while(gameStart){
             break;
 
         case 4:
-            log('This is the switch case of the search of the array');
+            log('Searching of the student details in array');
+            const searchID = +input.question("Enter id of the student to see details: ");
+            const studentDetialsSearch = [];
+            for(let i = 0; i < studentArray.length; i++){
+                if(studentArray[i].id === searchID){
+                    studentDetialsSearch[i] = studentArray[i];
+                }
+            }
+            log('The search of the details of the student ', studentArray)
             break;
 
         case 5:
@@ -81,6 +90,7 @@ while(gameStart){
 
         case 6:
             log('This is the switch case of the quit of the program');
+            gameStart = false;
             break;
 
         default:
