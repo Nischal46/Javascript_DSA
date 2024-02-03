@@ -41,4 +41,15 @@ switch(operation){
         array.length = array.length - 1;
         table(array);
         break;
+
+    case 3:
+        log('Search operation');
+        let findIndex;
+        for(let i = 0; i<array.length; i++){
+            if(array[i] === 'Remix'){
+                findIndex = i
+            }
+        }
+        log(`found data at the array index of ${findIndex}`);
+        break;
 }
