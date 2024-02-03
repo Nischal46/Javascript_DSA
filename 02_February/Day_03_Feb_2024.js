@@ -32,4 +32,13 @@ switch(operation){
         }
         table(array);
         break;
+
+    case 2:
+        log('Deletion operation');
+        for(let i = 2; i<array.length; i++){
+            array[i] = array[i+1];
+        }
+        array.length = array.length - 1;
+        table(array);
+        break;
 }
