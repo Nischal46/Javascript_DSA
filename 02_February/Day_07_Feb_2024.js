@@ -3,7 +3,7 @@
 const {log} = require('console');
 const input = require('readline-sync');
 
-let queue = [];
+let queue = [34,54];
 
 let maxsize = 5;
 
@@ -26,6 +26,20 @@ switch(operation){
         }
         log('Adding data in queue ', queue);
         break;
+
+    case 2:
+        log("Deleting Data in queue");
+        if(queueSize > 0){
+            for(let i=0; i<queue.length; i++){
+                queue[i] = queue[i+1];
+            }
+            queueSize--;
+            queue.length = queueSize;
+            log('Deleting data in queue ', queue)
+        }
+        else{
+            log('Queue is empty.')
+        }
 
     default:
         log('Invalid operation');
