@@ -42,7 +42,20 @@ while(gameStart){
                 return {id, name, age, email};
             }
 
-            for(let i = 0; i < noOfturn; i++){
+            // for(let i = 0; i < noOfturn; i++){
+            //     if(studentArray.length < 1){
+            //         const details = addstudentDetails();
+            //         studentArray.push(details);
+            //     }
+            //     else{
+            //         const details = addstudentDetails();
+            //         studentArray.push(details);
+            //     }
+                
+            // }
+
+            let i = 0;
+            while(i<noOfturn){
                 if(studentArray.length < 1){
                     const details = addstudentDetails();
                     studentArray.push(details);
@@ -51,7 +64,7 @@ while(gameStart){
                     const details = addstudentDetails();
                     studentArray.push(details);
                 }
-                
+                i++;
             }
             log('The insertion of the student details ', studentArray);
             break;
