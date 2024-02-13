@@ -39,6 +39,23 @@ function displayqueue(){
     console.log('the current queue is ', queue);
 }
 
+function dequeue(){
+    if(queuesize > 0){
+        for(let i=0; i < queue.length; i++){
+            queue[i] = queue[i+1];
+        }
+        queuesize--;
+        queue.length = queuesize;
+    }
+    else{
+        log('queue is empty');
+    }
+}
+
 enqueue(5);
 enqueue(1);
 displayqueue();
+
+console.log('Deleting data in queue');
+dequeue();
+displayqueue()
