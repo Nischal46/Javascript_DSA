@@ -43,3 +43,28 @@ class User{
 const user1 = new User('nisal', 'admin');
 console.log(user1);
 console.log(user1.username);
+
+let arr = [1, 2, 6, 5, 4, 9, 8];
+
+for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr.length; j++){
+        if(arr[j] > arr[j+1]){
+            let temp = arr[j];
+            arr[j] = arr[j+1]
+            arr[j+1] = temp;
+        }
+    }
+}
+
+for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr.length; j++){
+        if(arr[j] < arr[j+1]){
+            let temp = arr[j];
+            arr[j] = arr[j+1]
+            arr[j+1] = temp;
+        }
+    }
+}
+
+console.log('ascending array is ', arr);
+console.log('descending array is ', arr);
