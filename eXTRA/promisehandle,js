@@ -1,0 +1,87 @@
+const input  = require('readline-sync');
+
+const user = {
+    email: "testuser@gmail.com",
+    password: 'tester',
+    role: 'user'
+}
+
+const admin = {
+    email: 'admin@gmail.com',
+    password: 'admin',
+    role: 'admin'
+}
+
+const userEmail = input.question('Enter your email address: ');
+const userPassword = input.question("Enter your password: ");
+
+const loginPromise = new Promise(function (resolve, reject){
+    if(userEmail === user.email && userPassword === user.password)
+    {
+        resolve(user);
+    }
+
+    else if(userEmail === admin.email && userPassword === admin.password){
+        resolve(admin);
+    }
+
+    else{
+        reject("Incorrect Email or Password")
+    }
+}).then(function(val){
+    console.log(`Login Successfull. Welcome ${val.email}`);
+    return val.role;
+}).then(function(loginRole){
+    let arr = [23, 12, 9, 5, 45, 35];
+    console.log('the initial array of the number is ',  arr);
+    console.log(`
+    --> Press 1 to arrange the array in ascending order.
+    --> Press 2 to arrange the array in descending order`);
+
+    const option = +input.question("Enter a option: ");
+
+    if(loginRole === "admin"){
+        switch(option){
+            case 1:
+                for(let i = 0; i < arr.length; i++){
+                    for(let j = 0; j  < arr.length; j++){
+                        if(arr[j] > arr[j+1]){
+                            let temp = arr[j];
+                            arr[j] = arr[j+1];
+                            arr[j+1] = temp;
+                        }
+                    }
+                }
+    
+                console.log('the ascending order of the array is ', arr);
+                break;
+    
+            case 2:
+                for(let i = 0; i < arr.length; i++){
+                    for(let j = 0; j < arr.length; j++){
+                        if(arr[j < arr[j+1]]){
+                            let temp = arr[j];
+                            arr[j] = arr[j+1];
+                            arr[j+1] = temp;
+                        }
+                    }
+                    
+                }
+                console.log('the descending order of the array is ', arr);
+                break;
+    
+            default:
+                console.log('Please give the correct input');
+                break;
+        }
+    }
+
+    else{
+        return Promise.reject('You are logged in as user and you do not have authorized for sorting.')
+    }
+
+
+})
+.catch(function(err){
+    console.log(err);
+})
