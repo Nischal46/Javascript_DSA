@@ -43,6 +43,8 @@
 //Promise: promise resolve and reject
 // should create and consume the promise
 
+//this promise will execute last
+
 const promiseDefine = new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log('This line is executed after the suceed of settime function at 2 sec');
@@ -53,4 +55,17 @@ const promiseDefine = new Promise(function(resolve, reject){
 promiseDefine.then(function(){
     console.log('Called this line after the successfull resolve of the defined promise');
 })
+
+
+//this promise will execute first
+const promiseConcept = new Promise(function(resolve, reject){
+    if(2+2 === 5) resolve()
+    else reject('calculation is wrong')
+}).then(function(){
+    console.log('Successfully handled the promise');
+}).catch(function(err){
+    console.log(`error: ${err}`);
+})
+
+
 
