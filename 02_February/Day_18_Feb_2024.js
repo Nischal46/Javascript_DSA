@@ -40,4 +40,18 @@ for(let i = 0; i < newarray.length; i++){
 }
 console.log('number greater than 20 are ', greaterthan40);
 
+//for in loop
+
+let array1 = ['samsung', 'oppo', 'iphone', 'mi'];
+
+//for in we have to give the array index
+for (let i in array1){
+    console.log(array1[i]);
+}
+
+//for of automatcally detect the index value and we could only give index
+for (let i of array1){
+    console.log(i);
+}
+
 
