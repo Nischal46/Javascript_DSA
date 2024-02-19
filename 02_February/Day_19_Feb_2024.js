@@ -83,3 +83,51 @@ mobilearray.forEach((item, index) => {
 
 console.log('list of budgeet friendly mobile under 30000');
 console.table(mobilearray)
+
+
+const bikeDetails = [
+    {
+        name: 'pulsar 220',
+        price: 375000,
+        brand: 'bajaj'
+    },
+
+    {
+        name: 'ns 200',
+        price: 395000,
+        brand: 'bajaj'
+    }, 
+
+    {
+        name: 'r15',
+        price: 450000,
+        brand: 'yamaha'
+    },
+
+    {
+        name: 'duke 200',
+        price: 550000,
+        brand: 'ktm'
+    },
+
+    {
+        name: 'crf 250',
+        price: 1200000,
+        brand: 'honda'
+    }
+]
+
+function BikebrandSearch(bikebrand){
+const bikesearcharray = bikeDetails.filter(prev => prev.brand === bikebrand)
+console.log(bikesearcharray);
+}
+
+BikebrandSearch('bajaj');
+
+function BikeUnder5L(){
+const bikeunder5L = bikeDetails.filter(data => data.price < 500000);
+console.log('Bike under 5 Lakh');
+console.table(bikeunder5L)
+}
+
+BikeUnder5L();
