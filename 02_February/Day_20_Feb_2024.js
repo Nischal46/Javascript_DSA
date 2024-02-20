@@ -94,4 +94,20 @@ function Ascending_Name(){
 
 }
 
-Ascending_Name()
+// Ascending_Age()
+// Ascending_Name()
+
+function Descending_Age() {
+    studentDetails = studentDetails.sort((a, b) => b.age - a.age);
+    console.log(studentDetails);
+}
+
+// Descending_Age()
+
+function Descending_Name(){
+    studentDetails = studentDetails.sort((a, b) => b.name.localeCompare(a.name));
+    console.log('Arranging the student details in descending order according to name');
+    console.log(studentDetails)
+}
+
+Descending_Name()
