@@ -38,3 +38,60 @@ if (result !== -1) {
 } else {
     console.log(`The target ${searchEelement} is not found in the array`);
 }
+
+//fn to arrange the list of array in ascending order
+
+let studentDetails = [
+    {
+        id: 12,
+        name: 'harish',
+        age: 27
+    },
+
+    {
+        id: 34,
+        name: 'aman',
+        age: 25
+    },
+
+    {
+        id: 22,
+        name: 'bimal',
+        age: 32
+    }
+]
+
+function Ascending_Age(){
+    for(let i=0; i<studentDetails.length; i++){
+        for(let j=0; j<studentDetails.length-1; j++){
+            if(studentDetails[j].age > studentDetails[j+1].age){
+                let temp = studentDetails[j];
+                studentDetails[j] = studentDetails[j+1];
+                studentDetails[j+1] = temp
+            }
+        }
+    }
+    console.log(`Arranging student details ascending order according to age `);
+    console.log(studentDetails);
+}
+
+function Ascending_Name(){
+    let i = 0;
+    while(i < studentDetails.length){
+        let j = 0;
+        while(j < studentDetails.length - 1){
+            if(studentDetails[j].name > studentDetails[j+1].name){
+                let temp = studentDetails[j];
+                studentDetails[j] = studentDetails[j+1];
+                studentDetails[j+1] = temp
+            }
+            j++;
+        }
+        i++;
+    }
+    console.log(`Arranging student details ascending order according to name `);
+    console.log(studentDetails);
+
+}
+
+Ascending_Name()
