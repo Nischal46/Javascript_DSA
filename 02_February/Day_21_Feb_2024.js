@@ -38,3 +38,25 @@ console.log(`Arranging player Salary sorting in increasing`);
 console.log(playernewdetails);
 
 console.log('Player name in ascending order', playerName);
+
+class userDetails{
+    constructor(email, password, Loggedin){
+        this.email = email;
+        this.password = password;
+        this.Loggedin = Loggedin;
+    }
+
+    //to have redundancy beetween setter and constructor we should change variable namecase
+
+    get Loggedin(){
+        return this._Loggedin;
+    }
+
+    set Loggedin(val){
+        return this._Loggedin = val
+    }
+}
+
+const Loggedindata = new userDetails('Nischal', 'baniyanisal12@gmail.com', true)
+console.log(Loggedindata);
+
