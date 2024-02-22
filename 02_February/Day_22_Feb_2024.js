@@ -55,3 +55,34 @@ class License_Management_System {
 
 const cus1 = new License_Management_System('Nischal Baniya', 9263454567, 'baniyanisal12@gmail.com', 'A');
 console.table(cus1);
+
+class APIManagement{
+    constructor(array, query, model){
+        this.array = array;
+        this.query = query;
+        this.model = model;
+    }
+
+    //return this is compulsory for chaining method and also to accept the value 
+
+    filterByBrand(){
+        this.array = this.array.filter(x => x.brand === this.query)
+        return this;
+    }
+
+    filterByBrandandPrice(){
+        this.array = this.array.filter(x => (x.brand === this.query && x.model === this.model));
+        return this;
+    }
+}
+
+
+let bikeArray = [
+    {id: '123', brand: 'Bajaj', model: 'Dominar', cc: 400, price: 750000},
+    {id: '124', brand: 'KTM', model: 'Duke', cc: 250, price: 650000},
+    {id: '125', brand: 'Yamaha', model: 'R1', cc: 1000, price: 2500000},
+    {id: '126', brand: 'Yamaha', model: 'MT-09', cc: 900, price: 2200000}
+]
+
+const bikedetails = new APIManagement(bikeArray, 'Yamaha', 'MT-09').filterByBrandandPrice();
+console.log(bikedetails);
