@@ -35,4 +35,24 @@ const numcheck = array2.some(pd => pd > 50)
 console.log(numcheck);
 
 
+//differencee between the concept of flat and flatmap method
+
+let array3 = [1,[2, 3, 4], [5,6,7], [[8,9], 10]]
+console.log(array3.flat()); // by default it goes only 1 deep of the array
+console.log(array3.flat(2));
+
+let array4 = [
+    {name: 'Ramesh', instruments: ['piano', 'flute']},
+    {name: 'Suresh', instruments: ['ukulele']},
+    {name: 'Ganesh', instruments: ['drum', 'bass']},
+    {name: 'Naresh', instruments: ['guitar', ['tabala', 'harmoniom']]}
+];
+
+const separray = array4.map(item => item.instruments).flat(2);
+console.log(separray);
+
+//note flatmap cannot go further deep from 1 step as flat can go more deeper
+const separray2 = array4.flatMap(item => item.instruments);
+console.log(separray2);
+
 
