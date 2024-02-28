@@ -56,3 +56,13 @@ const separray2 = array4.flatMap(item => item.instruments);
 console.log(separray2);
 
 
+function firstFunction(fn1){
+    return function(fn2 = 'alteer'){
+        console.log(`${fn1} and ${fn2}`);
+    }
+}
+
+const insidefn = firstFunction('1stval');
+insidefn('2ndval')
+
+
