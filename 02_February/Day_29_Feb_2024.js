@@ -46,6 +46,9 @@ while(bool){
     --> Press 1 to enter the vehicle details
     --> Press 2 to get details of all vehicles
     --> Press 3 to search the vehicle details
+    --> Press 4 to delete the vehicle details
+    --> Press 5 to update the vehicle details
+    --> Press 6 to exit tha app
     `);
 
     const option = +input.question("Entera a choice: ");
@@ -69,14 +72,27 @@ while(bool){
             }
 
             else{
+                console.log('All the vehicle details record');
                 console.log(vehicleArray);
             }
+            break;
+
+        case 3:
+            console.log(`
+            --> Press 1 to search by brand
+            --> Press 2 to search by customer name 
+            `);
+
+
+        case 6:
+            bool = false;
+            console.log('Exit the app.');
             break;
 
         default:
             console.log("Invalid Input");
             break;
     }
-    console.log(vehicleArray);
+
 }
 
