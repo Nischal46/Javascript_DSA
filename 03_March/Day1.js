@@ -36,7 +36,27 @@ function fibonacciNum(n){
 }
 console.log(fibonacciNum(5));
 
+//the complexity of the algorithm is Big O - O(n)
+
 //Note both the loop that for and while are linear time complexity
+
+// problem 2
+//factorial number
+
+function factorialNum(n){
+    let result = 1;
+
+    for(let i = 2; i <= n; i++){
+        result = result * i;
+    }
+    return result;
+}
+
+console.log(factorialNum(5));
+
+//the function accepts the n no of times where the loop is derived for n no of times
+
+
 
 
 
