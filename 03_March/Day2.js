@@ -40,4 +40,20 @@ function fibonacciSeries(n){
 }
 console.log(fibonacciSeries(5));
 
+//count the repeat of the letter in string
+
+function countcheckLetter(str){
+    let letterCount = {}
+    for(let i = 0; i < str.length; i++){
+       
+        if(!letterCount[str[i]]) letterCount[str[i]] = 1;
+
+        else letterCount[str[i]]++;
+        
+    }
+    console.log(letterCount);
+}
+
+console.log(countcheckLetter('subconcious'));
+
 
