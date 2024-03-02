@@ -54,6 +54,19 @@ function countcheckLetter(str){
     console.log(letterCount);
 }
 
-console.log(countcheckLetter('subconcious'));
+countcheckLetter('subconcious');
+
+//algorithm to reverse the string
+
+function reverseString(str){
+    let reverse_str = ""
+    for(let i = str.length; i >= 0 ; i--){
+        reverse_str += str[i]
+    }
+
+    console.log(reverse_str);
+}
+
+reverseString("Coding Everyday")
 
 
