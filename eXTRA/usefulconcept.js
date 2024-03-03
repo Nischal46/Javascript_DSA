@@ -66,3 +66,28 @@ const insidefn = firstFunction('1stval');
 insidefn('2ndval')
 
 
+//operators
+//and operator = && , or operator = || , nullish = ??
+
+//nullish example and differentiate with or operator
+
+let playerattends = 0;
+
+const incoming = playerattends ?? 12; // returns 0
+const incoming1 = playerattends || 12; // returns 12
+console.log(incoming);
+
+//loop concepts
+//differentiate between regular loop and for of loop
+
+const subject = ['science', 'math', 'computer', 'english', 'nepali'] //as array is always seperated by indexing
+//compare to object it is seperated by key and value
+
+for(const sub of subject) console.log(sub); // for of loop doesnot need condition and increment for each iteration. it does automatically
+
+//if we want to have the iteration in for of we can use .entries() built in
+
+for(const sub of subject.entries()) console.log(sub);
+
+//we can directly destructure the array in loop
+for(const [index, element] of subject.entries()) console.log(`${index + 1}: ${element}`);
