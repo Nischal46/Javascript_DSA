@@ -92,3 +92,17 @@ function InsertionElement(arr, newelement, position){
 
 console.log(InsertionElement(array1, 45, 4));
 //time complexity: Big-O = O(n)
+
+
+let array2 = [43, 54, 77, 89, 68];
+
+function DeleteElement(arr, deleteIndex){
+    for(let i = deleteIndex; i < arr.length; i++){
+        arr[i] = arr[i+1]
+    }
+    array2.length -= 1;
+    console.log(array2);
+}
+
+DeleteElement(array2, 3)
+//Time complexity is O(n)
