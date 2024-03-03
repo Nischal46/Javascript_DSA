@@ -74,3 +74,21 @@ let numarray = [-4, -2, 3, 5, 8, 9, 10, 15]
 
 console.log(binarySearch(numarray, 8));
 
+//insertion of the element in the existed array and calculating its time complexity
+
+let array1 = [12,54,32,55,76,87,23];
+
+function InsertionElement(arr, newelement, position){
+    for(let i = arr.length - 1; i >= 0; i--){
+        if(i>=position){
+            array1[i+1] = array1[i]
+            if(i===position){
+                array1[i] = newelement
+            }
+        }
+    }
+    return array1
+}
+
+console.log(InsertionElement(array1, 45, 4));
+//time complexity: Big-O = O(n)
