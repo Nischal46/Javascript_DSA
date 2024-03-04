@@ -27,7 +27,20 @@ class Student{
         return this;
         
     }
+
+    addDetails(){
+        const name = 'nischal';
+        const email = 'nischal@gmail.com';
+        const faculty = 'MIT'
+
+        this.array.push({name, email, faculty});
+
+        return this;
+    }
 }
 
-const obj = new Student(studentdetails, 2).pagination();
+// const obj = new Student(studentdetails, 3).pagination();
+
+const obj = new Student(studentdetails, 3).addDetails();
+
 console.log(obj);
