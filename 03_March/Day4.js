@@ -28,6 +28,8 @@ function FibonacciSeries(numberoftimes){
 
 console.log(FibonacciSeries(6));
 
+// solution no 2
+
 function FactorialNumber(numberofTimes){
     let result = 1;
     for(let i = 2; i <= numberofTimes; i++){
@@ -39,3 +41,46 @@ function FactorialNumber(numberofTimes){
 }
 
 console.log(FactorialNumber(4));
+
+// solution no 3
+
+function LinearSearch(arr, target){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === target){
+            return i;
+        }
+    }
+}
+
+let array2 = [5,8,3,1,4,12,6]
+
+console.log(LinearSearch(array2, 4));
+
+
+// solution no 4
+
+function CheckBinarySearch(arr, target){
+    let leftpointer = 0;
+    let rightpointer = arr.length - 1;
+
+    while(leftpointer <= rightpointer){
+        let middlepointer = Math.floor((leftpointer + rightpointer) / 2);
+
+        if(target === arr[middlepointer]){
+            return middlepointer;
+        }
+
+        if(target < arr[middlepointer]){
+            rightpointer = middlepointer - 1;
+        }
+
+        else {
+            leftpointer = middlepointer + 1;
+        }
+    }
+
+    return "Not Found"
+}
+
+let array1 = [12, 25, 36, 47, 58, 60, 79]
+console.log(CheckBinarySearch(array1, 79));
