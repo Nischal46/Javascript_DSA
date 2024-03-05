@@ -47,3 +47,20 @@ function FibonacciSeries(no){
 }
 
 console.log(FibonacciSeries(5));
+
+//insertion sort of the array
+
+function InsertionSort(array){
+for(let i = 1; i < array.length; i++){
+    let numtoinsert = array[i];
+    let j = i -1;
+    while(j >= 0 && array[j] > numtoinsert){
+        array[j+1] = array[j]
+        j = j - 1;
+    }
+    array[j+1] = numtoinsert
+}
+return array
+}
+
+console.log(InsertionSort([-1, -5, 8, 4, -3, 6]));
