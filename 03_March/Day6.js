@@ -42,4 +42,15 @@ for(let i = 2; i <= 4; i++){
 
 console.log(result);
 
+//linear search and binary search
+
+let numarray = [23, 54, 14, 76, 34, 88, 92, 48];
+
+for(let i = 0; i < numarray.length; i++){
+    if(numarray[i] === 34){
+        console.log(`found at ${i}`);
+    }
+}
+
+
 
