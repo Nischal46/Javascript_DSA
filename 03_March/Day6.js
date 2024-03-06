@@ -24,3 +24,22 @@ for (let i = 1; i < arr.length ; i++){
 }
 arr.length -= 1
 console.log(arr);
+
+//fibonacci series upto n numbers
+
+const fibarr = [0,1];
+for(let i = 2; i < 7; i++){
+    fibarr[i] = fibarr[i-1] + fibarr[i-2]
+}
+console.log(fibarr);
+
+//factorial number
+
+let result = 1;
+for(let i = 2; i <= 4; i++){
+    result = result * i;
+}
+
+console.log(result);
+
+
