@@ -52,5 +52,26 @@ for(let i = 0; i < numarray.length; i++){
     }
 }
 
+function binarySearch(array, target){
+    let leftpointer = 0;
+    let rightpointer = array.length - 1;
+
+    while(leftpointer <= rightpointer){
+        let middlepointer = Math.floor((leftpointer + rightpointer) / 2);
+
+        if(target < array[middlepointer]){
+            rightpointer = middlepointer-1
+        }
+        if(target > array[middlepointer]){
+            leftpointer = middlepointer+1
+        }
+        else{
+            return middlepointer
+        }
+    }
+}
+
+console.log(binarySearch([2,3,4,5,6,7,8,9], 5));
+
 
 
