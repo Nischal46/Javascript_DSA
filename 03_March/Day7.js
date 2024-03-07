@@ -27,3 +27,13 @@ console.log(binarySearchAlgorithm([2,4,5,13,25,37,56,88,97], 26)); //return Not 
 console.log(binarySearchAlgorithm([2,4,5,13,25,37,56,88,97], 56)); //return 6 index
 
 //Time complexity: Big-O = O(n)
+
+//check the number is prime number or not
+
+function PrimeNumber(num){
+    if(num === 2) return "Prime Number"
+    if(num % 2 !== 0) return 'Prime Number';
+    else return 'Not Prime Number';
+}
+
+console.log(PrimeNumber(11))
