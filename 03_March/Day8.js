@@ -54,3 +54,62 @@ function SeperateEvenNumbers(arr){
 
 console.log(SeperateEvenNumbers(array2));
 
+//function and its default value parameter
+
+function CinemaTicketing(name, nationality = 'nepali'){
+    let price;
+    nationality === 'nepali' ? price = 190 : price = 250;
+    const stobject = {name, nationality, price};
+    console.log(stobject);
+}
+
+CinemaTicketing('Ramesh', 'america')
+
+//write aprogram to calculate factorial number
+
+function FactorialNumber(n){
+    let result = 1;
+    for(let i = 2; i <= n; i++){
+        result *= i
+        console.log(``);    }
+
+    return result;
+}
+
+console.log(FactorialNumber(4));
+
+//write a program to calculate fibonacci series
+
+function FibonacciSeries(n){
+const fibarr = [0,1];
+for(let i = 2; i < n; i++){
+    fibarr[i] = fibarr[i-1] + fibarr[i-2];
+}
+
+return fibarr;
+}
+
+console.log(FibonacciSeries(9));
+
+//write a program to seperate the prime number and composite number seperate
+
+function Seperation(arr){
+    let prime = [];
+    let notPrime = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 !== 0){
+            prime.push(arr[i])
+        }
+        else {
+            notPrime.push(arr[i])
+        }
+    }
+
+    let returnVal = {prime, notPrime}
+
+    return returnVal;
+}
+
+console.log(Seperation([3,4,5,6,7,8,9,10,11,12,13,14,15]));
+
+
