@@ -9,16 +9,37 @@ class Vehicle{
         this.color = color;
         this.price = price;
     }
-}
 
-class Car extends Vehicle{
-    constructor(name, model, brand, price, numberplate){
-        super(name, model, brand, price)
+    set name(val){
+        if(val === "" || val === null || val === undefined){
+            console.log('Must provided name of the vehicle');
+        }
+        else{ 
+            return this._name = val
+        }
+    }
 
-        this.numberplate = numberplate
-        
+    get name(){
+        return this._name
     }
 }
 
-const obj1 = new Car('Ferrari', 'REar Augusta', 'Red', 1200000, 'Ba pra 03 9876');
+class Car extends Vehicle{
+    #importer
+
+    constructor(name, model, brand, price, numberplate, importdealer){
+        super(name, model, brand, price)
+
+        this.numberplate = numberplate
+        this.#importer = importdealer
+        
+    }
+
+    getImporter() {
+        return this.#importer;
+    }
+}
+
+const obj1 = new Car('Ferrari', 'REar Augusta', 'Red', 1200000, 'Ba pra 03 9876', 'USA');
 console.log(obj1);
+console.log(obj1.getImporter());
