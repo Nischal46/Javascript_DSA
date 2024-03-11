@@ -76,3 +76,32 @@ function BubbleSort(array){
 }
 
 console.log(BubbleSort([-2, -6, 5, 3, 9, 8]));
+
+
+function FibonacciSeries(numberoftimes){
+    const fibarr = [0, 1]; // first declare array with two initial value
+
+    for(let i = 2; i <= numberoftimes; i++){
+        fibarr[i] = fibarr[i-1] + fibarr[i-2]
+        console.log(`Sum of ${fibarr[i-1]} and ${fibarr[i-2]} = ${fibarr[i]}`);
+    }
+
+    return fibarr;
+
+}
+
+console.log(FibonacciSeries(6));
+
+// solution no 2
+
+function FactorialNumber(numberofTimes){
+    let result = 1;
+    for(let i = 2; i <= numberofTimes; i++){
+
+        result = result * i
+
+    }
+    return result;
+}
+
+console.log(FactorialNumber(4));
