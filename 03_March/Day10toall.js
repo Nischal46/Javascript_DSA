@@ -56,3 +56,23 @@ function Seperation(arr){
 }
 
 console.log(Seperation([3,4,5,6,7,8,9,10,11,12,13,14,15]));
+
+
+function BubbleSort(array){
+    let swapped;
+    do{
+        swapped = false
+        for(let i = 0; i <array.length; i++){
+            if(array[i] > array[i+1]){
+                let temp = array[i];
+                array[i] = array[i+1];
+                array[i+1] = temp;
+                swapped = true;
+            }
+        }
+    }
+    while(swapped)
+    return array
+}
+
+console.log(BubbleSort([-2, -6, 5, 3, 9, 8]));
