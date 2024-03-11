@@ -35,4 +35,24 @@ async function main() {
     }
 }
 
-main().catch(error => console.error(error));
+// main().catch(error => console.error(error));
+
+
+function Seperation(arr){
+    let prime = [];
+    let notPrime = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 !== 0){
+            prime.push(arr[i])
+        }
+        else {
+            notPrime.push(arr[i])
+        }
+    }
+
+    let returnVal = {prime, notPrime}
+
+    return returnVal;
+}
+
+console.log(Seperation([3,4,5,6,7,8,9,10,11,12,13,14,15]));
