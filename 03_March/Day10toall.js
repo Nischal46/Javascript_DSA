@@ -105,3 +105,35 @@ function FactorialNumber(numberofTimes){
 }
 
 console.log(FactorialNumber(4));
+
+let array1 = [12,54,32,55,76,87,23];
+
+function InsertionElement(arr, newelement, position){
+    for(let i = arr.length - 1; i >= 0; i--){
+        if(i>=position){
+            array1[i+1] = array1[i]
+            if(i===position){
+                array1[i] = newelement
+            }
+        }
+    }
+    return array1
+}
+
+console.log(InsertionElement(array1, 45, 4));
+//time complexity: Big-O = O(n)
+
+
+let array2 = [43, 54, 77, 89, 68];
+
+function DeleteElement(arr, deleteIndex){
+    for(let i = deleteIndex; i < arr.length; i++){
+        arr[i] = arr[i+1]
+    }
+    array2.length -= 1;
+    console.log(array2);
+}
+
+DeleteElement(array2, 3)
+//Time complexity is O(n)
+
