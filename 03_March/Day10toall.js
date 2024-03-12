@@ -145,6 +145,7 @@ class RegistrationUser{
         this.password = password;
     }
 
+   
     set password(val){
         if(val.length < 8){
             console.log("Password length must be 8 character length");
@@ -167,8 +168,37 @@ class RegistrationUser{
         return this._password;
     }
 
+    set email(val){
+        if(!/[^a-zA-Z0-9]/.test(val)){
+            console.log("Please use authenticate email address");
+        }
+
+        else{
+            return this._email = val;
+        }
+    }
+
+    get email(){
+        return this._email;
+    }
+
+    static greeting(){
+        console.log(`Hello ${this.name}. You should follow the instructions`);
+    }
+
+
+
+
 }
 
-const obj = new RegistrationUser('Nischal Baniya', 'nisal12@gmail.com', 'Admin1234!');
-console.log(obj);
+const obj = new RegistrationUser('Nischal Baniya', 'nisal12gmailcom', 'Admin1234@');
+
+if(!obj.password || !obj.email){
+    console.log(RegistrationUser.greeting());
+}
+
+else{
+    console.log(obj);
+}
+
 
