@@ -206,15 +206,74 @@ class RegistrationUser{
 
 let start = true;
 let registerArray = [];
-while(start){
-    console.log('The total data in register array: ', registerArray.length);
-    const name = input.question("Enter your username: ");
-    const email = input.question("Enter email address: ");
-    const password = input.question("Enter password: ");
+// while(start){
+//     console.log('The total data in register array: ', registerArray.length);
+//     const name = input.question("Enter your username: ");
+//     const email = input.question("Enter email address: ");
+//     const password = input.question("Enter password: ");
 
-    const userobject = new RegistrationUser(name, email, password);
-    registerArray.push(userobject);
+//     const userobject = new RegistrationUser(name, email, password);
+//     registerArray.push(userobject);
 
-    console.log(registerArray);
+//     console.log(registerArray);
 
+// }
+
+// function OlderConstructorFunction(accountNo, pinNo){
+//     this._accountNo = accountNo;
+//     this._pinNo = pinNo;
+
+//     Object.defineProperty(this, 'pinNo', {
+//         get: function(){
+//             return this._pinNo;
+//         },
+//         set: function(val){
+//             if(val.length !== 4){
+//                 console.log('Pin No must be the length of 4 character');
+//             }
+//             else if(isNaN(val)){
+//                 console.log('Pin No must be number not string');
+//             } 
+//             else{
+//                 return this._pinNo = val;
+//             }
+//         }
+//     })
+// }
+
+// const accountUSer = new OlderConstructorFunction(2343245354, 'fdsds');
+// console.log(accountUSer);
+
+function OlderConstructorFunction(accountNo, pinNo){
+    this._accountNo = accountNo;
+    this._pinNo = pinNo;
+
+    Object.defineProperty(this, 'pinNo', {
+        get: function(){
+            return this._pinNo;
+        },
+        set: function(val){
+            if(val.length !== 4){
+                throw new Error('Pin No must be of length 4 characters');
+            }
+            else if(typeof val !== 'number'){
+                throw new Error('Pin No must be a number');
+            } 
+            else {
+                return this._pinNo = val;
+            }
+        }
+    });
+
+    // Check PIN validity when object is created
+    if(pinNo.length !== 4 || isNaN(pinNo)){
+        throw new Error('Invalid PIN number');
+    }
+}
+
+try {
+    const accountUser = new OlderConstructorFunction(2343245354, '1234');
+    console.log(accountUser); // This won't be reached due to the error thrown
+} catch (error) {
+    console.error(error.message); // Output: Invalid PIN number
 }
