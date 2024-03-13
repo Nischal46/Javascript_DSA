@@ -1,4 +1,4 @@
-// const input = require('readline-sync');
+const input = require('readline-sync');
 
 // async function FetchingData() {
 //     const fetchdata = await fetch('https://fakestoreapi.com/products');
@@ -191,14 +191,30 @@ class RegistrationUser{
 
 }
 
-const obj = new RegistrationUser('Nischal Baniya', 'nisal12gmailcom', 'Admin1234@');
+// const obj = new RegistrationUser('Nischal Baniya', 'nisal12gmailcom', 'Admin1234@');
 
-if(!obj.password || !obj.email){
-    console.log(RegistrationUser.greeting());
+// if(!obj.password || !obj.email){
+//     console.log(RegistrationUser.greeting());
+// }
+
+// else{
+//     console.log(obj);
+// }
+
+
+//write a function that rums loop simultaneously if the username is already existed throw error
+
+let start = true;
+let registerArray = [];
+while(start){
+    console.log('The total data in register array: ', registerArray.length);
+    const name = input.question("Enter your username: ");
+    const email = input.question("Enter email address: ");
+    const password = input.question("Enter password: ");
+
+    const userobject = new RegistrationUser(name, email, password);
+    registerArray.push(userobject);
+
+    console.log(registerArray);
+
 }
-
-else{
-    console.log(obj);
-}
-
-
