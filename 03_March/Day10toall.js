@@ -306,3 +306,14 @@ while(leftpointer <= rightpointer){
 }
 
 console.log(BubbleSortAlgo(array, 7))
+
+function FibonacciSeries(n){
+    const fibarr = [0,1];
+    for(let i = 2; i < n; i++){
+        fibarr[i] = fibarr[i-1] + fibarr[i-2];
+    }
+    
+    return fibarr;
+    }
+    
+    console.log(FibonacciSeries(9));
