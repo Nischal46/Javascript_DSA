@@ -244,36 +244,65 @@ let registerArray = [];
 // const accountUSer = new OlderConstructorFunction(2343245354, 'fdsds');
 // console.log(accountUSer);
 
-function OlderConstructorFunction(accountNo, pinNo){
-    this._accountNo = accountNo;
-    this._pinNo = pinNo;
+// function OlderConstructorFunction(accountNo, pinNo){
+//     this._accountNo = accountNo;
+//     this._pinNo = pinNo;
 
-    Object.defineProperty(this, 'pinNo', {
-        get: function(){
-            return this._pinNo;
-        },
-        set: function(val){
-            if(val.length !== 4){
-                throw new Error('Pin No must be of length 4 characters');
-            }
-            else if(typeof val !== 'number'){
-                throw new Error('Pin No must be a number');
-            } 
-            else {
-                return this._pinNo = val;
-            }
-        }
-    });
+//     Object.defineProperty(this, 'pinNo', {
+//         get: function(){
+//             return this._pinNo;
+//         },
+//         set: function(val){
+//             if(val.length !== 4){
+//                 throw new Error('Pin No must be of length 4 characters');
+//             }
+//             else if(typeof val !== 'number'){
+//                 throw new Error('Pin No must be a number');
+//             } 
+//             else {
+//                 return this._pinNo = val;
+//             }
+//         }
+//     });
 
-    // Check PIN validity when object is created
-    if(pinNo.length !== 4 || isNaN(pinNo)){
-        throw new Error('Invalid PIN number');
+//     // Check PIN validity when object is created
+//     if(pinNo.length !== 4 || isNaN(pinNo)){
+//         throw new Error('Invalid PIN number');
+//     }
+// }
+
+// try {
+//     const accountUser = new OlderConstructorFunction(2343245354, '1234');
+//     console.log(accountUser); // This won't be reached due to the error thrown
+// } catch (error) {
+//     console.error(error.message); // Output: Invalid PIN number
+// }
+
+
+
+//function to find the element in sorted array by bubble sort
+
+let array = [1,2,3,4,5,6,7,8,9];
+
+function BubbleSortAlgo(arr, target){
+let leftpointer = 0;
+let rightpointer = arr.length - 1;
+
+while(leftpointer <= rightpointer){
+    let middlepointer = Math.floor((leftpointer + rightpointer) / 2);
+
+    if(target === arr[middlepointer]){
+        return middlepointer;
+    }
+
+    else if(target < arr[middlepointer]){
+        rightpointer = middlepointer - 1
+    }
+
+    else {
+        leftpointer = middlepointer + 1
     }
 }
-
-try {
-    const accountUser = new OlderConstructorFunction(2343245354, '1234');
-    console.log(accountUser); // This won't be reached due to the error thrown
-} catch (error) {
-    console.error(error.message); // Output: Invalid PIN number
 }
+
+console.log(BubbleSortAlgo(array, 7))
