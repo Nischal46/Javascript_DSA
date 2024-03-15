@@ -23,3 +23,23 @@ function SeperationofArray(arr){
 }
 
 console.log(SeperationofArray(array));
+
+//using error constructor
+
+function CheckValid(){
+   try {
+    if(2+3 == 6){
+        console.log('True')
+    }
+    else{
+        throw 'Wrong Calculation'
+    }
+   } catch (error) {
+    console.log('catch called: ', error);
+   }
+   
+    
+}
+
+CheckValid();
+
