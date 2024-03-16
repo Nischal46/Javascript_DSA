@@ -22,7 +22,7 @@ function SeperationofArray(arr){
 
 }
 
-console.log(SeperationofArray(array));
+// console.log(SeperationofArray(array));
 
 //using error constructor
 
@@ -41,5 +41,17 @@ function CheckValid(){
     
 }
 
-CheckValid();
+// CheckValid();
+
+//Recursion Concept
+//it is the concept to render the same name declared function inside its own.
+//basically this is the concept which acts same like loop
+
+function RecursiontoPrintNumber(no){
+    console.log(`${no} time:`);
+    if(no < 10) RecursiontoPrintNumber(no + 1);
+}
+
+let numstartwith = 1;
+RecursiontoPrintNumber(numstartwith)
 
