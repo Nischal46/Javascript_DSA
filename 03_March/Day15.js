@@ -53,5 +53,15 @@ function RecursiontoPrintNumber(no){
 }
 
 let numstartwith = 1;
-RecursiontoPrintNumber(numstartwith)
+// RecursiontoPrintNumber(numstartwith)
+
+function RecursionFactorial(no){
+    if(no == 0){
+        return 1;
+    }
+
+    return no * RecursionFactorial(no - 1)
+}
+
+console.log(RecursionFactorial(5));
 
