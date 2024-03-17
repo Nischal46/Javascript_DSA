@@ -63,5 +63,42 @@ function RecursionFactorial(no){
     return no * RecursionFactorial(no - 1)
 }
 
-console.log(RecursionFactorial(5));
+// console.log(RecursionFactorial(5));
 
+//bubble sort algorithm to rearrange the array of object in ascending order
+
+let instruments = [
+    {
+        name: 'guitar',
+        price: 12000,
+        brand: 'mantra'
+    },
+    {
+        name: 'flute',
+        price: 1000,
+        brand: 'buddha flute'
+    },
+    {
+        name: 'ukulele',
+        price: 4000,
+        brand: 'Ranch'
+    },
+    {
+        name: 'harmonium',
+        price: 18000,
+        brand: 'Bira'
+    }
+];
+
+//arranging instruments in ascending order
+for(let i = 0; i < instruments.length; i++){
+    for(let j = 0; j < instruments.length - 1; j++){
+        if(instruments[j].price > instruments[j+1].price){
+            let temp = instruments[j];
+            instruments[j] = instruments[j+1];
+            instruments[j+1] = temp
+        }
+    }
+}
+
+console.log(instruments);
