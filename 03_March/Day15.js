@@ -101,4 +101,18 @@ for(let i = 0; i < instruments.length; i++){
     }
 }
 
-console.log(instruments);
+// console.log(instruments);
+
+function FibonacciSeries(no){
+    const fibarr = [0,1];
+
+    for(let i = 2; i<=no; i++){
+        fibarr[i] = fibarr[i-1] + fibarr[i-2]
+    }
+
+    return fibarr
+}
+
+console.log(FibonacciSeries(6));
+
+
