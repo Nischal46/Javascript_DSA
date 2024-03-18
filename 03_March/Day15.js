@@ -120,18 +120,32 @@ function FibonacciSeries(no){
 function License_Management_System(name, contact, district, category){
     
     this.name = name;
-    this.contact = contact;
+    this._contact = contact;
     this.district = district;
     this.category = category;
 
+    Object.defineProperty(this, 'contact', {
+        get: function(){
+            return this._contact
+        },
+        set: function(val){
+            console.log('Insert in this block');
+            if(val.length < 10 || val.length > 10) console.log('Invalid phone number');
+            else return this._contact = val
+        }
+    })
+
 }
+
+
 
 License_Management_System.prototype.checkCategory = function(){
     if(this.category === 'A') console.log('Applied for Bike, Scooter');
     else if(this.category === 'B') console.log('Applied for Car, Jeep');
 }
 
-const cus1 = new License_Management_System('Nischal Baniya', 9844445422, 'Lalitpur', 'A');
+const cus1 = new License_Management_System('Nischal Baniya', 9846565422, 'Lalitpur', 'A');
+console.log(cus1);
 console.log(cus1.checkCategory());
 
 
