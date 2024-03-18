@@ -113,6 +113,25 @@ function FibonacciSeries(no){
     return fibarr
 }
 
-console.log(FibonacciSeries(6));
+// console.log(FibonacciSeries(6));
+
+//constructor function
+
+function License_Management_System(name, contact, district, category){
+    
+    this.name = name;
+    this.contact = contact;
+    this.district = district;
+    this.category = category;
+
+}
+
+License_Management_System.prototype.checkCategory = function(){
+    if(this.category === 'A') console.log('Applied for Bike, Scooter');
+    else if(this.category === 'B') console.log('Applied for Car, Jeep');
+}
+
+const cus1 = new License_Management_System('Nischal Baniya', 9844445422, 'Lalitpur', 'A');
+console.log(cus1.checkCategory());
 
 
