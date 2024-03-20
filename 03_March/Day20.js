@@ -100,4 +100,41 @@ function check_highest_subscriber(arr){
 
     console.log('The highest subscriber is ', highest_Csub_creator);
 }
-check_highest_subscriber(creator)
+// check_highest_subscriber(creator)
+
+
+let array = [1,2,3,4,5,6,7,8,9];
+
+function BubbleSortAlgo(arr, target){
+let leftpointer = 0;
+let rightpointer = arr.length - 1;
+
+while(leftpointer <= rightpointer){
+    let middlepointer = Math.floor((leftpointer + rightpointer) / 2);
+
+    if(target === arr[middlepointer]){
+        return middlepointer;
+    }
+
+    else if(target < arr[middlepointer]){
+        rightpointer = middlepointer - 1
+    }
+
+    else {
+        leftpointer = middlepointer + 1
+    }
+}
+}
+
+console.log(BubbleSortAlgo(array, 7))
+
+function FibonacciSeries(n){
+    const fibarr = [0,1];
+    for(let i = 2; i < n; i++){
+        fibarr[i] = fibarr[i-1] + fibarr[i-2];
+    }
+    
+    return fibarr;
+}
+    
+console.log(FibonacciSeries(9));
