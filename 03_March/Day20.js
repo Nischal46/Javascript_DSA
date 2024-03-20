@@ -77,4 +77,27 @@ function CheckVowels(str){
    
 }
 
-CheckVowels('guitar and ukulele')
+// CheckVowels('guitar and ukulele')
+
+
+//check out the highest youtube subscribers
+
+const creator = [
+    {channel: 'why so offend', subscriber: 194000},
+    {channel: 'The Nepali Comment', subscriber: 257000},
+    {channel: 'IDS', subscriber: 135000}
+]
+
+function check_highest_subscriber(arr){
+    let highest_greater = 0;
+    let highest_Csub_creator = ""
+    for(const array of arr){
+        if(array.subscriber > highest_greater){
+            highest_greater = array.subscriber;
+            highest_Csub_creator = array.channel
+        }
+    }
+
+    console.log('The highest subscriber is ', highest_Csub_creator);
+}
+check_highest_subscriber(creator)
