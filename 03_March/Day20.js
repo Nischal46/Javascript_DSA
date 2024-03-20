@@ -39,4 +39,42 @@ function FindDuplicateElement(str){
     console.log('highest repeatance character is ', repeatance_character);
 }
 
-FindDuplicateElement('young and talented')
+// FindDuplicateElement('young and talented')
+
+
+
+//find the vowels in string and its repeatance times
+
+function CheckVowels(str){
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    let vowel_check_statistics = {}
+
+    for(const char of str){
+     if(char !== " "){
+        if(vowels.includes(char)){
+            console.log(char, 'is a vowel character');
+            if(vowel_check_statistics[char]){
+                vowel_check_statistics[char]++;
+            }
+            else{
+                vowel_check_statistics[char] = 1
+            }
+            
+        }
+        else{
+            console.log(char, 'is not a vowel character');
+            // if(vowel_check_statistics[char]){
+            //     vowel_check_statistics[char]++;
+            // }
+            // else{
+            //     vowel_check_statistics[char] = 1
+            // }
+        }
+     }
+    }
+    console.log(vowel_check_statistics);
+   
+}
+
+CheckVowels('guitar and ukulele')
