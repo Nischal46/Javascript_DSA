@@ -47,3 +47,15 @@ let stringnew = "hello programmers";
 for(const i in stringnew){
     console.log(i, stringnew[i])
 }
+
+//for in loop in object
+
+const pcdetails = {
+    name: 'DELL',
+    price: 68000,
+    processor: 'i5 generation'
+}
+
+for(const cd in pcdetails){
+    console.log(cd);
+}
