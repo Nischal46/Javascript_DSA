@@ -35,4 +35,29 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-loginsystem()
+// loginsystem()
+
+//bubble sort algorithm to sort the array
+
+function BubbleSort(array){
+    let swapped;
+    do{
+        swapped = false
+        for(let i = 0; i <array.length; i++){
+            if(array[i] > array[i+1]){
+                let temp = array[i];
+                array[i] = array[i+1];
+                array[i+1] = temp;
+                swapped = true;
+            }
+        }
+    }
+    while(swapped)
+    return array
+}
+
+console.log(BubbleSort([-2, -6, 5, 3, 9, 8]));
+
+// time complexity: O(n^2)
+
+//print factorial number of n no
