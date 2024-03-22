@@ -1,13 +1,38 @@
-//automatically run the function using settimeout
-const input = require('readline-sync')
-const timeout = 5000;
+//account login system
+const input = require('readline-sync');
 
+async function loginsystem(){
+    let lock = true;
+let count = 1;
+while(lock){
+    
 
+    if(count <= 3){
+        const password = input.question("Enter a password: ");
+        if(password === "admin"){
+            console.log("password matched");
+            break;
+        }
+        else{
+            console.log("wrong password");
+            count++;
+        }
+    }
 
-const OS_Password = input.question("Enter password: ");
-
-for(let i = 0; i < 3; i++){
-    setTimeout(() => {
-        console.log('time out function execute')
-    }, timeout);
+    else{
+        console.log('Lock for 5 sec');
+        lock = false;
+        await delay(5000);
+        lock = true;
+        count = 1;
+    }
 }
+
+
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+loginsystem()
