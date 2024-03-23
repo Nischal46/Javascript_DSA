@@ -61,3 +61,15 @@ console.log(BubbleSort([-2, -6, 5, 3, 9, 8]));
 // time complexity: O(n^2)
 
 //print factorial number of n no
+
+//algorithn to find the fibonacci series
+
+function FibonacciSeries(n){
+    const fibarr = [0,1];
+    for(let i = 2; i <= n; i++){
+        fibarr[i] = fibarr[i-1] + fibarr[i - 2];
+    }
+
+    console.log(fibarr);
+}
+FibonacciSeries(4)
