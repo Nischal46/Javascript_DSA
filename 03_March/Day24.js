@@ -36,19 +36,42 @@ let array = [12, 43, 65, 76, 47, 87];
 const input = require('readline-sync');
 let gradearray = [[],[]];
 
-for(let i = 0; i < 5; i++){
-    const name = input.question("Enter student name: ");
-    const grade = +input.question("Enter grade: ");
+// for(let i = 0; i < 5; i++){
+//     const name = input.question("Enter student name: ");
+//     const grade = +input.question("Enter grade: ");
 
-    if(grade === 11){
-        gradearray[0].push({name, grade})
-    }
+//     if(grade === 11){
+//         gradearray[0].push({name, grade})
+//     }
 
-    else{
-        gradearray[1].push({name, grade})
-    }
-}
+//     else{
+//         gradearray[1].push({name, grade})
+//     }
+// }
 
 //in other concept we can also used multi dimnensional array inorder to sepearte according to gender
 
 console.log(gradearray);
+
+//adding newer value in existed array
+
+let student = ['ram', 'hari'];
+
+//this ... dot is known as spread operator where the existed old value is been carried and merge to new value
+const newarray = [...student, 'ramesh']
+console.log(newarray);
+
+//spread operator can be used on the array and object
+
+//another most useful method is reduce method of array
+
+const name = ['ram', 'hari', 'ramesh', 'laxman'];
+
+const filterperson = name.reduce((acc, cur) => {
+    if(cur.startsWith('r')) return [...acc, cur];
+    else return acc
+}, [])
+
+console.log(filterperson);
+
+//this will minimize the steps and made easy and the output is ['ram', 'ramesh']
