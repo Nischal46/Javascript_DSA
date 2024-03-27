@@ -44,3 +44,20 @@ for(let i = 1; i <= 5; i++){
     // console.log("\n");
     console.log(line);
 }
+
+line = ""
+for(let i = 1; i <= 5; i++){
+    line += "*"
+    console.log(line);
+}
+
+const input = require('readline-sync');
+
+let start = true
+while(start){
+    const name = input.question("enter role: ");
+
+    let timeRecorder = setTimeout(() => console.log('count'), 5000)
+}
+
+
