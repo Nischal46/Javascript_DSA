@@ -30,6 +30,17 @@ function jumbleString(str) {
 }
 
 // Example usage
-var originalString = "guitar";
+var originalString = "serial";
 var jumbledString = jumbleString(originalString);
 console.log(jumbledString); // Output will be a jumbled version of the original string
+
+//printing star using function
+
+for(let i = 1; i <= 5; i++){
+    let line = ""
+    for(let j = i; j <=5; j++){
+        line += "*"
+    }
+    // console.log("\n");
+    console.log(line);
+}
