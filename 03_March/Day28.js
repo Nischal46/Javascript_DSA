@@ -1,7 +1,7 @@
-const {createPool} = require('mysql');
-const dotenv = require('dotenv').config({path: '../.env'})
+const mysql = require('mysql');
+const dotenv = require('dotenv').config({path: './config.env'})
 
-const pool = createPool({
+const pool = mysql.createPool({
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.PASSWORD,
