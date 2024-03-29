@@ -29,3 +29,10 @@ const evennum = arr.reduce((acc, el) => {
 }, [])
 
 console.log(evennum);
+
+let num2 = [8,3,4,[6,5]]
+
+console.log(num2);
+
+const flatmap = num2.flatMap(cl => cl);
+console.log(flatmap);
