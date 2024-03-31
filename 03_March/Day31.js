@@ -16,3 +16,17 @@ function Letter_Repeatance(str){
 }
 
 Letter_Repeatance('television')
+
+
+//converting the string of the small letter of first letter into capitalize
+//example: pulsar :-> Pulsar
+
+function Capitalize(str) {
+    // Capitalizing the first letter
+    if (str.length > 0) {
+        str = str[0].toUpperCase() + str.slice(1);
+    }
+    return str;
+}
+
+console.log(Capitalize('pulsar')); 
