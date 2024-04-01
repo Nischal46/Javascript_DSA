@@ -30,3 +30,4 @@ function Capitalize(str) {
 }
 
 console.log(Capitalize('pulsar')); 
+
