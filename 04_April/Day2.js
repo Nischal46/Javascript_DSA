@@ -65,8 +65,25 @@ console.log(sortedArray);
 
 const unsortedName = ['ram', 'hari', 'laxman', 'eklavya', 'kumar', 'ganesh', 'krishna', 'bishnu', 'shiva'];
 
-const sortedName = unsortedName.sort((a,b) =>a.localeCompare(b));
+const sortedName = unsortedName.sort((a,b) => a.localeCompare(b));
 console.log(sortedName);
 
+//chech whether the string is palindrome or not
 
+const originalstring = "racecar";
 
+const wordlength = originalstring.length;
+// console.log(wordlength);
+let reverse_string = "";
+
+for(let i = wordlength - 1; i >= 0; i--){
+    reverse_string = reverse_string + originalstring[i];
+}
+
+// console.log(reverse_string);
+if(originalstring === reverse_string){
+    console.log('String is palindrome');
+}
+else{
+    console.log('String is not Palindrome');
+}
