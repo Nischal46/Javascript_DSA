@@ -58,5 +58,15 @@ class Triangle{
 const obj = new Triangle(3,7,3);
 obj.getdetails();
 
+const unsortedArray = [43, 23, 12, 55, 26];
+
+const sortedArray = unsortedArray.sort();
+console.log(sortedArray);
+
+const unsortedName = ['ram', 'hari', 'laxman', 'eklavya', 'kumar', 'ganesh', 'krishna', 'bishnu', 'shiva'];
+
+const sortedName = unsortedName.sort((a,b) =>a.localeCompare(b));
+console.log(sortedName);
+
 
 
