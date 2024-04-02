@@ -29,7 +29,34 @@ const obj1 = new Rectangle(4, 2);
 console.log(obj1);
 obj1.details();
 
-// class Rectangle extends Perimeter{}
+// class Rectangle extends Perimeter{} 
+
+//check if the triangle is isosceles triangle, equilateral triangle or right angle triangle
+
+class Triangle{
+    constructor(a, b, c){
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    getdetails(){
+        if(this.a === this.b && this.a === this.c){
+            console.log('Equilateral Triangle');
+        }
+
+        else if(this.a === this.b || this.a === this.c || this.b === this.c){
+            console.log('Isosceles Triangle');
+        }
+
+        else{
+            console.log('Right Angle Triangle');
+        }
+    }
+}
+
+const obj = new Triangle(3,7,3);
+obj.getdetails();
 
 
 
