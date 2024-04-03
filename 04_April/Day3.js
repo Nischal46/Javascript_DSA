@@ -21,3 +21,11 @@ const promise = new Promise((resolve, reject) => {
 });
 
 promise.then((msg) => console.log(msg)).catch((err) => console.log(err));
+
+
+const login = new Promise((resolve, reject) => {
+    if(3+3 === 6) resolve('true login credentials');
+    else reject('wrong login credentials')
+})
+
+login.then((res) => console.log(res)).catch((err) => console.log(err));
