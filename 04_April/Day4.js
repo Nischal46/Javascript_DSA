@@ -39,4 +39,12 @@ function AddElement(n){
     return array;
 }
 
-console.log(AddElement(3));
+// console.log(AddElement(3));
+
+//delete of the element
+
+const deleteData = array.splice(1, 1);
+console.log(deleteData);
+
+const searchdata = array.indexOf(54);
+console.log(searchdata);
