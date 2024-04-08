@@ -15,3 +15,15 @@ function RemoveElements(arr){
 }
 
 console.log(RemoveElements([1,2,3,4,5,2,3,6,7]))
+
+// alternative method
+
+const newelemnet = [12,34,65,12,34,67,43,21];
+
+const removing_duplicate_element = (arr) => {
+    let newarr = [...new Set(arr)]
+
+    return newarr
+}
+
+console.log(removing_duplicate_element(newelemnet));
