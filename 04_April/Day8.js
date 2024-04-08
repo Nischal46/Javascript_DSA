@@ -30,6 +30,7 @@ const removing_duplicate_element = (arr) => {
 
 // write a function that count the vowels from the string and returns the count to the user asd output
 
+//option no 1
 function Counting_Vowels(str){
     let count = 0;
     for(const i of str){
@@ -41,3 +42,19 @@ function Counting_Vowels(str){
 }
 
 console.log(Counting_Vowels('an umbrella'));
+
+//option no 2
+
+let vowels = ['a', 'e', 'i', 'o', 'u']
+
+function Check_Vowels(str){
+    let count = 0;
+    for(const i of str){
+        if(vowels.includes(i.toLowerCase())){
+            count++;
+        }
+    }
+
+    return `There are ${count} vowels in ${str}`
+}
+console.log(Check_Vowels('lAptop'));
