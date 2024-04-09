@@ -35,5 +35,14 @@ function AddingElement(newelement, position){
 
 //alternative splice method
 
-array.splice(2, 0, 77);
+let addeddata = array.splice(2, 0, 77);
+console.log(addeddata);
+
+let deleteData = array.shift() //this is to remove the first element from the array
+console.log(deleteData);
+
+let deletelastData = array.pop();// this is to delete the last element of the array
+console.log(deletelastData);
+
+array.splice(1, 2); //this is to delete the data from random place
 console.log(array);
