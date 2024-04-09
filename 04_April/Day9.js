@@ -46,3 +46,18 @@ console.log(deletelastData);
 
 array.splice(1, 2); //this is to delete the data from random place
 console.log(array);
+
+
+let original_array = [12, 43, 22, 54, 67, 47, 98];
+let updatearray = [];
+
+for(let i = 0; i <= original_array.length - 1; i++){
+    if(original_array[i] === 22){
+        original_array[i] = 27
+    }
+    else{
+        original_array[i] = original_array[i]
+    }
+}
+
+console.log(original_array);
