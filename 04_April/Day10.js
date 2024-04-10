@@ -64,6 +64,26 @@ function Check_Palindrome(str_arr) {
 
 let array_String = ['wow', 'racecar', 'songs']
 
-Check_Palindrome(array_String)
+// Check_Palindrome(array_String)
+
+//write a function that arrange the array in ascending sorting whether the input is number or string
+
+function Sorting_function(arr){
+
+    for(let i = 0; i <= arr.length - 1; i++){
+        for(let j = 0; j <= arr.length - 1; j++){
+            if(arr[j] > arr[j+1]){
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+
+    return arr;
+
+}
+
+console.log(Sorting_function([23,12,4,8,9,56,35]));
 
 
