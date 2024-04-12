@@ -10,4 +10,20 @@ function FibonacciSeries(n){
     return arr;
 }
 
-console.log(FibonacciSeries(6));
+// console.log(FibonacciSeries(6));
+
+//write a function that checks whether the string first letter is uppercase or not
+
+function CheckLowercase(arr){
+    for(const i of arr){
+        if(i[0] === i[0].toUpperCase()){
+            console.log(`${i} is uppercase`);
+        }
+        else{
+            console.log(`${i} is not upeercase`);
+        }
+    }
+}
+
+const stringArray = ['Good', 'excellent', 'Calendar', 'mobile', 'Hard work']
+CheckLowercase(stringArray)
