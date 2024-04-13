@@ -1,4 +1,5 @@
 //dsa: tree concept
+const util = require('util');
 
 class Node{
     constructor(val){
@@ -26,11 +27,27 @@ class BinarySearchTree{
         if(root.value > newNode.value){
             root.left === null ? root.left = newNode : this.insertNode(root.left, newNode) 
         }
+        else{
+            root.right === null ? root.right = newNode : this.insertNode(root.right, newNode)
+        }
+    }
+
+    searchNode(root, val){
+        if(root === null) return "Not found";
+
+        else if(root.value === val) return "Search found."
+
+        else if(root.value > val) return this.searchNode(root.left, val)
+
+        else return this.searchNode(root.right, val)
     }
 }
 
 const obj = new BinarySearchTree()
 obj.rootNode(12);
 obj.rootNode(7);
+obj.rootNode(15);
+obj.rootNode(5)
+console.log(obj.searchNode(obj.root, 17));
 
-console.log(obj);
+// console.info(obj.isEmptyNode());
