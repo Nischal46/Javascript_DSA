@@ -34,9 +34,29 @@ class Binary_Search_Tree{
     }
 }
 
-const obj = new Binary_Search_Tree();
-// console.log(obj.isEmptyNode());
+// const obj = new Binary_Search_Tree();
+// // console.log(obj.isEmptyNode());
 
-obj.declareNode(23)
+// obj.declareNode(23);
+// obj.declareNode(33);
+// obj.declareNode(12);
 
+// console.log(obj);
+
+class Registration{
+    constructor(name, email, password){
+        this.name = name;
+        this.email = email;
+        this.password = password || null
+    }
+}
+
+class GmailRegistration extends Registration{
+    constructor(name, email){
+        super(name, email)
+        this.Loggedin = "Gmail"
+    }
+}
+
+const obj = new GmailRegistration('Nischal Baniya', 'baniyanisal12@gmail.com');
 console.log(obj);
