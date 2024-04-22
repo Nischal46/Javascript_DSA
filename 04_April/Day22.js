@@ -10,3 +10,16 @@ const seperate = numArray.reduce((acc, cur) => {
 }, [])
 
 console.log(seperate);
+
+//suppose the value from frontend comes as length and breadth in array
+
+let value = [3, 4];
+
+//suppose the length is 3 and breadth is 4
+
+const result = value.reduce((acc, cur, index) => {
+    acc *= 2*cur
+    return acc
+}, 1)
+
+console.log(result);
