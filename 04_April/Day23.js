@@ -35,3 +35,10 @@ const numDivisible = randomNum.filter(function(cl){
 })
 
 console.log(numDivisible);
+
+//differentiate between flat and flatmap
+
+let stname = ['ram', 'laxman', 'dipak', 'aman', 'roshan', ['samir', 'sabin', 'hari', ['omkar']]];
+
+const stdetail = stname.flat(2).sort();
+console.log(stdetail);
