@@ -27,3 +27,11 @@ for(let i = 0; i <= numArray.length - 1; i++){
 }
 
 console.log(numArray);
+
+let randomNum = [12, 34, 66, 21, 43, 66, 78, 88];
+
+const numDivisible = randomNum.filter(function(cl){
+    if(cl % 2 == 0) console.log(`${cl} divisible by 2`);
+})
+
+console.log(numDivisible);
