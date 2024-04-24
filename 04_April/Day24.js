@@ -17,5 +17,25 @@ Object.prototype.flashdetails = function(){
     `);
 }
 
-const obj = new Details('Nischal', 'Lalitpur', 9844738900, 'nisal@gmail.com');
-obj.flashdetails()
+// const obj = new Details('Nischal', 'Lalitpur', 9844738900, 'nisal@gmail.com');
+// obj.flashdetails()
+
+//same concept using class and object
+
+class ClassDetails{
+    constructor(name, age){
+        this.name  = name;
+        this.age = age;
+    }
+
+    details(greeting){
+        console.log(`
+        ${greeting}
+        Name: ${this.name}
+        Age: ${this.age}
+        `);
+    }
+}
+
+const obj = new ClassDetails('Nischal', 24);
+obj.details('WELCOME')
