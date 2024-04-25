@@ -9,3 +9,15 @@ function SecondClass(){
 }
 
 MainClass(SecondClass)
+
+//passing arguement and accept in callback
+
+function Parent(callback, arg){
+    callback(arg);
+}
+
+function child(arg){
+    console.log(`${arg} from highorder function`);
+}
+
+Parent(child, 'arguement pass')
