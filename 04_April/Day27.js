@@ -21,3 +21,16 @@ function child(arg){
 }
 
 Parent(child, 'arguement pass')
+
+//for of loop
+
+let string = 'helping'
+
+for(const i of string){
+    if(i === 'i'){
+        console.log('It contains i letter in string');
+        return
+    }
+
+    console.log(i);
+}
