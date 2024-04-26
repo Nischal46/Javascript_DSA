@@ -42,3 +42,23 @@ let stname = ['ram', 'laxman', 'dipak', 'aman', 'roshan', ['samir', 'sabin', 'ha
 
 const stdetail = stname.flat(2).sort();
 console.log(stdetail);
+
+//constructor function and its prototype
+
+function Details(name, address, contact, email){
+    this.name = name;
+    this.address = address;
+    this.contact = contact;
+    this.email = email;
+}
+
+Object.prototype.flashdetails = function(){
+    console.log(`
+    WELCOME
+    Name: ${this.name}
+    Address: ${this.address}
+    Contact: ${this.contact}
+    Email: ${this.email}
+    `);
+}
+
