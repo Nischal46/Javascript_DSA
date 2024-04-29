@@ -34,3 +34,25 @@ ValidateEmailAddress('baniyanisal12@gmail.com')
     console.log("Email Address verified successfully");
 }).catch((err) => console.log('Email Address verified failed')
 )
+
+
+//an array of number is passed and the function should calculate only the positive numbers and display result to the users.
+
+function AddSumNumber(arr){
+
+    let total = 0;
+
+    for(const item of arr){
+
+        if(item % 2 == 0){
+            total = total + item
+        }
+
+    }
+
+    console.log(`The total of the sum number is ${total}`);
+}
+
+let no = [2, 3, 4, 5, 6, 7, 8, 9]
+
+AddSumNumber(no)
