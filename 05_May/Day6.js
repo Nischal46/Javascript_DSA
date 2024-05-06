@@ -7,3 +7,12 @@ const sepName = array.reduce((acc, cur) => {
 }, [])
 
 console.log(sepName);
+
+let num = [23, 43, 54, 66, 78, 65];
+
+const divby2 = num.reduce((acc, num) => {
+    if(num % 2 == 0) acc.push(num)
+    return acc;
+}, [])
+
+console.log(divby2);
