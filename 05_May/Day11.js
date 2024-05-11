@@ -4,6 +4,10 @@ class Songs{
         this.songDuration = songDuration;
         this.songType = songType;
     }
+
+    parentclassMethod(){
+        console.log('This is the parent class method');
+    }
 }
 
 class SongsPrototype extends Songs{
@@ -25,3 +29,4 @@ class SongsPrototype extends Songs{
 
 const obj = new SongsPrototype('Breathless', 3, 'Classical-Rock');
 obj.getDetails();
+obj.parentclassMethod();
