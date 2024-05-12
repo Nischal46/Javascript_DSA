@@ -42,3 +42,48 @@ let stname = ['ram', 'laxman', 'dipak', 'aman', 'roshan', ['samir', 'sabin', 'ha
 
 const stdetail = stname.flat(2).sort();
 console.log(stdetail);
+
+
+/ queue function
+
+let queue = [];
+
+let maxsize = 4;
+
+let queuesize = queue.length;
+
+function enqueue(val){
+    if(queuesize <= maxsize){
+        queue[queuesize] = val;
+        queuesize++;
+    }
+
+    else{
+        console.log('queue is fulfilled already');
+    }
+}
+
+function displayqueue(){
+    console.log('the current queue is ', queue);
+}
+
+function dequeue(){
+    if(queuesize > 0){
+        for(let i=0; i < queue.length; i++){
+            queue[i] = queue[i+1];
+        }
+        queuesize--;
+        queue.length = queuesize;
+    }
+    else{
+        log('queue is empty');
+    }
+}
+
+enqueue(5);
+enqueue(1);
+displayqueue();
+
+console.log('Deleting data in queue');
+dequeue();
+displayqueue()
