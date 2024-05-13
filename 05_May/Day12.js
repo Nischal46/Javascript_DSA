@@ -44,7 +44,7 @@ const stdetail = stname.flat(2).sort();
 console.log(stdetail);
 
 
-/ queue function
+// queue function
 
 let queue = [];
 
