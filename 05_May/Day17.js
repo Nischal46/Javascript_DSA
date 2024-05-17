@@ -19,3 +19,16 @@ let filtername = namearray.filter(function(cl){
 })
 
 console.log(filtername);
+
+
+//flat map and flat
+
+let numarray = [54, 543, 344, 12, [34, 56, 76, 70, [98, 54]]]
+
+let flatarray = numarray.flat(2);
+console.log(flatarray);
+
+//flat five a option to deep dive into nested array whereas flatmap only works for one deeper array
+
+let flatmaparray = numarray.flatMap(el => el);
+console.log(flatmaparray);
