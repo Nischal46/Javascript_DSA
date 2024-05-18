@@ -14,3 +14,18 @@ function Loginsystem(username, password){
 Loginsystem('admin', 'admin')
 .then((res)=> console.log('Successfully login'))
 .catch((err)=> console.log('Wrong credentials'))
+
+
+async function asyncLoginsystem(username, password){
+    if(username === "admin" && password === "admin"){
+        return await "successful login";
+    }
+
+    else{
+        return await "login failed"
+    }
+}
+
+asyncLoginsystem('admin', 'admi')
+.then((res) => console.log(res))
+.catch((err) => console.log(err))
