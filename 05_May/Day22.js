@@ -20,3 +20,11 @@ const output = ParentFunction();
 console.log(output);
 
 output();
+
+let array = [21, 43, 56, 99, 69];
+
+const num = array.filter(cl => {
+    if(cl % 3 === 0) return cl;
+});
+
+console.log(num);
