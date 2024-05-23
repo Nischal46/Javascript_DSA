@@ -22,3 +22,11 @@ let moviesarray = [
 let movienamearray = moviesarray.flatMap(cl => cl.name);
 console.log(movienamearray);
 
+let typemovie = moviesarray.filter(cl => {
+    if(cl.type === "science-fiction"){
+        return cl.type
+    }
+})
+
+console.log(typemovie);
+
