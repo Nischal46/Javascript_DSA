@@ -11,3 +11,12 @@ for(let i = 0; i < numarray.length - 1; i++){
 }
 
 console.log(numarray);
+
+
+for (let i = 2; i<=numarray.length - 1; i++){
+    numarray[i] = numarray[i+1];
+    numarray.length = numarray.length - 1;
+}
+
+console.log('After deletion: ');
+console.log(numarray);
