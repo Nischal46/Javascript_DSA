@@ -30,3 +30,8 @@ function removeDuplicate(no){
 }
 
 console.log(removeDuplicate(num1));
+
+let name = 'nischal baniya';
+
+let slicestring = name.slice(0, 7);
+console.log(slicestring);
