@@ -18,7 +18,7 @@ stobject.details();
 
 // queue function
 
-let queue = [];
+let queue = []; 
 
 let maxsize = 4;
 
