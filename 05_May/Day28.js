@@ -16,4 +16,4 @@ function isPalindrome(str) {
   }
   
   // Example usage:
-  console.log(findMissingNumber([1, 2, 4, 5, 6])); // Output: 3
+  console.log(findMissingNumber([1, 2, 4, 5, 6])); // Output: 3 
