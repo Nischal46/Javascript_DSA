@@ -45,3 +45,17 @@ for(let i = 0; i < numArray.length - 1; i++){
 }
 
 console.log('Ascending order ', numArray); 
+
+
+
+let stArray = [
+    {nmae: 'ram', class: 9},
+    {name: 'laxman', class: 9},
+    {name: 'hari', class: 8}
+]
+
+let filterarray = stArray.filter(cl => {
+    if(cl.class > 8) return cl;
+})
+
+console.log(filterarray);
