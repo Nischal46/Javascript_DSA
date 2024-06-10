@@ -13,3 +13,21 @@ Categories.prototype.details = function(){
 const obj = new Categories('Hukka mero', 'mp3');
 console.log(obj);
 obj.details();
+
+//same logic using OOPs class and objects
+
+class MusicTypes{
+    constructor(name, type){
+        this.name = name;
+        this.type = type;
+    }
+
+    getDetails(){
+        if(this.type === "mp3") console.log('Music songs file');
+        else if(this.type === 'mp4') console.log("Video file containing");
+    }
+}
+
+const obj1 = new MusicTypes('Din', 'mp4');
+console.log(obj1);
+obj1.getDetails();
