@@ -31,3 +31,17 @@ class MusicTypes{
 const obj1 = new MusicTypes('Din', 'mp4');
 console.log(obj1);
 obj1.getDetails();
+
+let numArray = [21, 32, 44, 12, 26];
+
+for(let i = 0; i < numArray.length - 1; i++){
+    for(let j = 0; j < numArray.length - 1; j++){
+        if(numArray[j] > numArray[j+1]){
+            let temp = numArray[j];
+            numArray[j] = numArray[j+1];
+            numArray[j+1] = temp 
+        }
+    }
+}
+
+console.log('Ascending order ', numArray); 
