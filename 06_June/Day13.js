@@ -31,3 +31,21 @@ console.log('After unshift of the element', newArr);
 newArr.shift();
 console.log('After shift of the element', newArr);
 
+//array questioning
+
+//whether array exist the element or not and it gives output in boolean
+console.log(newArr.includes('b'));
+
+//gives the correct index if it contains otherwise it return -1
+console.log(newArr.indexOf('c'));
+console.log(newArr.indexOf('e'));
+
+// incase if we want to change the array into string then 
+
+console.log(newArr.join());
+
+//reemove of the element
+
+console.log(newArr.slice(0, 1));
+
+console.log(newArr.splice(0,1));
