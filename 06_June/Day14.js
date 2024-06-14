@@ -90,3 +90,25 @@ console.log('extracting only values', onlyvalues);
 
 let checkKey = fullobject.hasOwnProperty('sunday');
 console.log(checkKey);
+
+//Immideeately Invoked Function execution (IIFE)
+
+(function DBConnect(){
+    console.log('Successfully Database is connected');
+})()
+
+//higher ordeer array
+
+//map concept
+
+//map doesnot accept duplicate keyb so it has to be unique key
+const map = new Map();
+map.set('NP', "Nepal");
+map.set('CH', "China");
+map.set("UK", "United Kingdom");
+
+console.log(map);
+
+for (const [it, val] of map) {
+    console.log(`${it} : ${val}`);
+}
