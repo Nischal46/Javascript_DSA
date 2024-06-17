@@ -27,7 +27,7 @@ function Details(item, itemPrice, manufacture){
 
 const obj1 = new Details('headset', 2500, 'fantech');
 const obj2 = new Details('mouse', 1500, 'fantech')
-// console.log(obj1);
+// console.log(obj1 instanceof Details);
 // console.log(obj2);
 
 //prtotypal behaviour
@@ -39,4 +39,64 @@ Object.prototype.description = function(){
 
 let newArray = ['pen', 'pencil', 'copy'];
 
-newArray.description();
+// newArray.description();
+
+//call and this 
+
+let userarray = ['nischal', 'nischal07']
+
+function DBValidation(nameinput){
+    return new Promise((resolve, reject) => {
+        if(!userarray.includes(nameinput)) {
+            this.nameinput = nameinput;
+            resolve(this)
+        }
+
+        else{
+            reject("username already exists.")
+        }
+    })
+}
+
+function RegistrationUser(name, email, password){
+    DBValidation.call(this, name).then(() => {
+        this.email = email;
+        this.password = password
+        console.log(this);
+    }).catch((err) => console.log(err))
+    
+}
+
+// const obj = new RegistrationUser('nischal63', 'nisal@gmail.com', 'asdf');
+
+// console.log(obj);
+
+function AxiosRequest(baseUrl){
+    this.baseUrl = baseUrl;
+    this.browser = 'google';
+    this.mode = 'development';
+}
+
+function Serverconfiguration(project, baseurl){
+    this.project = project;
+    AxiosRequest.call(this, baseurl);
+
+}
+
+const obj4 = new Serverconfiguration('react project', 'http://www.axios.com');
+// console.log(obj4); 
+
+//apply method: if you want to deal with the array in params then 
+
+function JSLibraries(p1, p2){
+    return this.libraries = [p1, p2];
+}
+
+function ProgrammingLanguage(language, p1, p2){
+    
+    this.language = language;
+    JSLibraries.apply(this, [p1, p2])
+}
+
+const newobj = new ProgrammingLanguage('js', 'react', 'jquery')
+console.log(newobj);
