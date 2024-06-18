@@ -62,3 +62,39 @@ function PassportManagement(username, age, contact, email){
 const obj1 = new PassportManagement('nischal', 22, 9845768974, 'nisal@gmail.com')
 console.log(obj1);
 
+
+function Operation(num1, num2, operator){
+    if(operator === "minus"){
+        this.result = num1 - num2;
+    }
+    else if(operator === "add"){
+        this.result = num1 + num2;
+    }
+}
+
+function Calculation(a, b, operator){
+    this.a = a;
+    this.b = b;
+    Operation.call(this, a, b, operator)
+}
+
+const obj2 = new Calculation(5, 2, 'add');
+console.log(obj2);
+
+
+function Instrument(item){
+    this.instruments = []
+    for (const cl of item) {
+        this.instruments.push(cl);
+    }
+}
+
+function ShopDetails(name, location, instruments){
+    this.name = name;
+    this.location = location;
+    Instrument.apply(this, [instruments]);
+}
+
+const obj3 = new ShopDetails('Electronic Accessories', 'kumaripati', ['guitar', 'cajon', 'ukulele', 'drum']);
+console.log(obj3);
+
