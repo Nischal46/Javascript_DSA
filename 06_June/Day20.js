@@ -36,3 +36,20 @@ function DrivingManagementSystem(name, age, contact){
 
 const object1 = new DrivingManagementSystem('Ravi', 42, 9843598532);
 console.log(object1);
+
+function Movie(movieName, releaseDate, duration, actors){
+    this.movieName = movieName;
+    this.releaseDate = releaseDate;
+    this.duration = `${duration} min`;
+    ActorArray.apply(this, [actors])
+}
+
+function ActorArray(actor){
+    this.actorArray = [];
+    for(cl of actor){
+        this.actorArray.push(cl)
+    }
+}
+
+const object2 = new Movie('Kabbasi 4', '2021', 73, ['Dayahang rai, Saugat malla, Bijay baral']);
+console.log(object2);
