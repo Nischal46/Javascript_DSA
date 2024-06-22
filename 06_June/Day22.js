@@ -24,3 +24,25 @@ try {
 } catch (error) {
     console.log('OOps Error occured. ', error.message);
 }
+
+//getter and setter in constructor fn or factory function
+
+function ProductManagement(itemName, itemBrand){
+    this._itemName = itemName;
+    this.itemBrand = itemBrand;
+
+    Object.defineProperty(this, 'itemName', {
+        get: function(){
+            return this._itemName
+        },
+        set: function(value){
+            this._itemName = `${value}0987`
+        },
+        enumerable: true
+    })
+}
+
+const productObject = new ProductManagement('laptop', 'dell');
+productObject.itemName = 'pc'
+console.log(productObject);
+console.log(productObject.itemName);
