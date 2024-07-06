@@ -43,5 +43,30 @@ function Registration(name, email, password){
 }
 
 
-const newobj = new Registration('nischal', 'nischalgmail.com', 'admin')
-console.log(newobj);
+// const newobj = new Registration('nischal', 'nischalgmail.com', 'admin')
+// console.log(newobj);
+
+//call method in js
+
+function VotingEligible(age){
+    return new Promise((resolve, reject) => {
+        if(age > 18) resolve('User is verified and eligible for voting.');
+        else reject('User is not verified and not eligible for voting.')
+    })
+}
+
+function RegistrationUser(name, age, contact){
+   
+    VotingEligible.call(this, age).then(()=> {
+        this.name = name;
+        this.contact = contact;
+        console.log(this);
+    })
+    .catch((err) => {
+        console.log(err); 
+    });
+   
+}
+
+const objcall = new RegistrationUser('samin', 17, 98083232);
+// console.log(objcall);
