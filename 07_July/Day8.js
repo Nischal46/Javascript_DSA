@@ -53,4 +53,16 @@ let totalsum = item.reduce((acc, cur) => {
 
 console.log('The total sum of the item is', totalsum);
 
+//check if the item is above certain price
+
+let checkisAvailability = item.some((i) => i.itemPrice > 5000);
+//it return in true or false boolean value
+
+console.log(checkisAvailability);
+
+//soting item in ascending order
+
+let sortedItem = item.sort((a, b) => a.itemPrice - b.itemPrice);
+console.log('sorted items are ', sortedItem);
+
 
