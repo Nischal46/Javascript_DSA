@@ -11,7 +11,7 @@ AddVisiter('SDF2324');
 AddVisiter('ERT2343');
 AddVisiter('ERT2343');
 
-console.log('unique visitor ID:', Array.from(uniqueVisitor));
+// console.log('unique visitor ID:', Array.from(uniqueVisitor));
 
 //closure concept
 //that means lexical scope where var and value can be access through the 
@@ -37,8 +37,8 @@ function OneLevelLexicalScope(){
     // SecondLevelLexicalScope()
 }
 // console.log(insidescopevariable); //basically this throws us an error
-const closureConcept = OneLevelLexicalScope();
-console.log(closureConcept());
+// const closureConcept = OneLevelLexicalScope();
+// console.log(closureConcept());
 
 
 //method chaining
@@ -62,5 +62,36 @@ function chainingMethod(initialtransaction){
     }
 }
 
-const obj = new chainingMethod(250000);
-obj.addtransaction(100000).deducttransaction(20000)
+// const obj = new chainingMethod(250000);
+// obj.addtransaction(100000).deducttransaction(20000)
+
+//callback hell concept
+
+function fn1(callback){
+    setTimeout(() => {
+        console.log('Data fetched');
+        callback();
+    }, 1000);
+}
+
+function fn2(callback){
+    setTimeout(() => {
+        console.log('Data processed');
+        callback();
+    }, 2000);
+}
+
+function fn3(callback){
+    setTimeout(() => {
+        console.log('Data saved');
+        callback();
+    }, 3000);
+}
+
+fn1(() => {
+    fn2(() => {
+        fn3(() => {
+            console.log('finally all the operations are completed');
+        })
+    })
+})
