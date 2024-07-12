@@ -39,3 +39,28 @@ function OneLevelLexicalScope(){
 // console.log(insidescopevariable); //basically this throws us an error
 const closureConcept = OneLevelLexicalScope();
 console.log(closureConcept());
+
+
+//method chaining
+
+function chainingMethod(initialtransaction){
+    this.initialtransaction = initialtransaction;
+    let amount = 0;
+
+    this.addtransaction = function(balance){
+        console.log('Dear customer your balance had been debited by', balance);
+        amount = balance + this.initialtransaction;
+        console.log(`Total balance: ${amount}`);
+        return this;
+    }
+
+    this.deducttransaction = function(balance){
+        console.log('Dear customer your balance had been credited by', balance);
+        amount = amount - balance;
+        console.log(`Total balance: ${amount}`);
+        // return this;
+    }
+}
+
+const obj = new chainingMethod(250000);
+obj.addtransaction(100000).deducttransaction(20000)
