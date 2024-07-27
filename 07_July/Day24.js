@@ -5,13 +5,13 @@ const pupeteer = require('puppeteer');
 
 async function webscrappingHTML(){
     try {
-        const response = await axios.get('https://targetinternet.com/resources/what-is-data-scraping-and-how-can-you-use-it');
+        const response = await axios.get('https://github.com/Nischal46');
 
         const html = response.data;
 
         const $ = cheerio.load(html);
 
-        const title = $('.card-resource-body h3').text();
+        const title = $('.repo').text();
 
         console.log(`Title: ${title}`);
     } catch (error) {
