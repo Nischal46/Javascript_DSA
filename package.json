@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.2",
     "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
@@ -24,7 +26,9 @@
     "lodash": "^4.17.21",
     "mysql": "^2.18.1",
     "mysql2": "^3.10.3",
+    "playwright": "^1.45.3",
     "prompt-sync": "^4.2.0",
+    "puppeteer": "^22.14.0",
     "readline-sync": "^1.4.10",
     "sqlite3": "^5.1.7"
   },
