@@ -163,3 +163,23 @@ const reduceMethod = sumDetails.reduce(function (acc, cval){
 }, 0);
 
 console.log('The total sum of the grocery is Rs', reduceMethod);
+
+
+function sumofAll(n){
+    let multipleof3 = [];
+    let multipleof5 = [];
+    let totalsum = 0;
+    for(let i = 1; i <= n; i++){
+        let multiple3 = 3 * i;
+        let multiple5 = 5 * i;
+
+        totalsum = totalsum + (multiple3 + multiple5)
+        multipleof3.push(multiple3);
+        multipleof5.push(multiple5)
+    }
+
+    console.log(multipleof3, multipleof5);
+    console.log('total sum: ', totalsum);
+}
+
+sumofAll(4)
