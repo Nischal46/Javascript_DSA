@@ -35,5 +35,34 @@ for(const x of string){
 console.log(letterCount);
 
 
+// returning the second largest number from array and if not return null;
 
+function findSecondLargest(arr) {
+    if (arr.length < 2) {
+        return null;
+    }
+
+    let first = null;
+    let second = null;
+
+    for (const num of arr) {
+        if (num > first) {
+            second = first;
+            first = num;
+        } else if (num < first && (second === null || num > second)) {
+            second = num;
+        }
+    }
+
+    return second;
+}
+
+// Test cases
+console.log(findSecondLargest([10, 20, 20, 8, 15])); // Output: 15
+console.log(findSecondLargest([5, 5, 5]));           // Output: null
+console.log(findSecondLargest([1, 2, 3, 4, 5]));     // Output: 4
+console.log(findSecondLargest([5]));                 // Output: null
+console.log(findSecondLargest([9, 9, 8, 7, 7]));     // Output: 8
+
+}
 
