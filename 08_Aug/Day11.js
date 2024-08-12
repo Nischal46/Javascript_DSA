@@ -64,5 +64,4 @@ console.log(findSecondLargest([1, 2, 3, 4, 5]));     // Output: 4
 console.log(findSecondLargest([5]));                 // Output: null
 console.log(findSecondLargest([9, 9, 8, 7, 7]));     // Output: 8
 
-}
 
