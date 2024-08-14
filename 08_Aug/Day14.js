@@ -115,6 +115,41 @@ let reduceMethod = arrayProduct.reduce((acc, cv) => {
 
 console.log('--------------using reduce method------------------', reduceMethod);
 
+let stringchar = '@3dedew 32dfgdgfd !32sdfdsfds';
+
+stringchar = stringchar.replace(/\s+/g, '').split('').filter(cl => cl !== '@').filter(cl => cl !== '!').reduce((acc, cv) => {
+    if(acc[cv]){
+        acc[cv]++;
+    }
+
+    else{
+        acc[cv] = 1;
+    }
+
+    return acc;
+}, {});
+
+console.log(stringchar);
+
+
+//write a program that generates the random Token
+
+let tokenCharacter = '123213213dsfcdsffcdsfsd!@#@!#!@fdsdfsdf';
+
+let generateToken = '';
+for(let i=0; i<11; i++){
+    generateToken += tokenCharacter[Math.floor(Math.random() * tokenCharacter.length)];
+}
+
+console.log('Password generator token: ', generateToken);
+
+
+
+
+
+
+
+
 
 
 
