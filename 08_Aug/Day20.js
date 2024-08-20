@@ -45,3 +45,17 @@ const IIFEFunction = (()=> {
 IIFEFunction()
 
 IIFEFunction()
+
+//Rest parameter in function
+
+function RestParameterConcept(...params){
+    let stringconcat = '';
+    for(const cl of params){
+        console.log('The function parameter are: ', cl);
+        stringconcat += cl + ' ';
+    }
+    console.log('The participants are: ', stringconcat);
+    
+}
+
+RestParameterConcept('nischal', 'dinesh', 'sabin')
