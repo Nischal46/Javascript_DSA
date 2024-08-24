@@ -23,3 +23,22 @@ const filterByBoth = filterProducts(products)({ price: 200, category: 'Electroni
 console.log(filterByPrice); 
 console.log(filterByCategory);
 console.log(filterByBoth);
+
+
+//declarative vs imperative code approach
+// ..declarative is easy to understand the flow of code whereas the imperative code hides the functioning
+
+let num = [12, 34, 54, 56, 65];
+
+//using declarative approach
+
+for(let i = 0; i < num.length; i++){
+    if(num[i] > 40){
+        console.log(`${num[i]} is greater than 40`);
+    }
+}
+
+//using imperative approach
+
+let filternum = num.filter(cl => cl > 40 && console.log(`Number ${cl} is greater than 40`)
+)
