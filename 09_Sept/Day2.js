@@ -23,29 +23,39 @@ function LogoutUser(){
 
 let bool = true;
 
-while(bool){
-    const inputChoice = +input.question('Enter a choice for operation: ');
+// while(bool){
+//     const inputChoice = +input.question('Enter a choice for operation: ');
 
-    switch(inputChoice){
-        case 1:
-            const name = input.question("Enter name: ");
-            const email = input.question("Enter email: ");
-            const password = input.question("Enter password: ");
-            RegisterUser(name, email, password);
-            break;
-        case 2:
-            const loginemail = input.question("Enter email: ");
-            const loginpassword = input.question("Enter password: ");
-            LoginUser();
-            break;
-        case 3:
-            LogoutUser();
-            break;
-        case 4:
-            bool = false;
-            break;
-        default:
-            console.log('Invalid choice');
-            break;
-    }
+//     switch(inputChoice){
+//         case 1:
+//             const name = input.question("Enter name: ");
+//             const email = input.question("Enter email: ");
+//             const password = input.question("Enter password: ");
+//             RegisterUser(name, email, password);
+//             break;
+//         case 2:
+//             const loginemail = input.question("Enter email: ");
+//             const loginpassword = input.question("Enter password: ");
+//             LoginUser();
+//             break;
+//         case 3:
+//             LogoutUser();
+//             break;
+//         case 4:
+//             bool = false;
+//             break;
+//         default:
+//             console.log('Invalid choice');
+//             break;
+//     }
+// }
+
+//string compression
+
+let stringrriginal = "aaabbc";
+
+function StringCompression(stringinput){
+    let stringcompress
 }
+
+StringCompression(stringrriginal)
