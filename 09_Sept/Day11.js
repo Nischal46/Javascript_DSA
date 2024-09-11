@@ -19,3 +19,25 @@ function AddNumbers(arr){
 }
 
 AddNumbers(numarray)
+
+//array chunking logic
+function chunkArray(array, size) {
+
+    let arraychunking = [];
+    let index = 0;
+    for( let i of array){
+        if(!arraychunking[index]){
+            arraychunking[index] = [];
+        }
+        if(arraychunking[index].length < 3){
+            arraychunking[index].push(i);
+        }
+        if(arraychunking[index].length === size) {
+            index++;
+          }
+    }
+    console.log('The array chunking concept is ', arraychunking);
+    
+  }
+  
+ chunkArray([1, 2, 3, 4, 5, 6, 7, 8], 3);
