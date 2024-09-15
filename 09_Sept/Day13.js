@@ -23,8 +23,30 @@ function bookRoom(){
 
 }
 
-console.log(bookRoom());
+// console.log(bookRoom());
 
-console.log(bookRoom());
+// console.log(bookRoom());
 
-bookRoom()
+// bookRoom()
+
+
+let inventory = [
+    { name: 'Apple', quantity: 10 },
+    { name: 'Banana', quantity: 5 },
+    { name: 'Orange', quantity: 8 },
+  ];
+
+function sellingItem(item, quantity){
+
+    for (const element of inventory) {
+        if(item === element.name){
+
+            element.quantity = element.quantity - quantity;
+            console.log(`Your apple stock is decreased by ${quantity} and available stock is ${element.quantity}`);
+        }
+    }
+
+    return inventory;
+}
+
+console.log(sellingItem('Apple', 4));
