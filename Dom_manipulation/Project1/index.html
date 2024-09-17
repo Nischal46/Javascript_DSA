@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>This is index.html file and we are learning html accessing of parentNode and parentElement</div>
+    <h1>Hello Programmer</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+</body>
+
+<script>
+    let targeting_document = document.querySelector('li');
+    console.log(targeting_document.parentNode);
+
+    let targeting_children = document.querySelector('ul');
+    console.log(targeting_children.children); //only target actual children tag
+
+</script>
+</html>
