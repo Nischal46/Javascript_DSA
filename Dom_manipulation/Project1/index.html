@@ -12,14 +12,31 @@
         <li>HTML</li>
         <li>CSS</li>
     </ul>
+
+    <h4>First child and first Element concept</h4>
+    <div id="child">
+        <p>This is first child</p>
+        <p>This is second child</p>
+        <p>This is third child</p>
+    </div>
 </body>
 
 <script>
-    let targeting_document = document.querySelector('li');
-    console.log(targeting_document.parentNode);
+    // let targeting_document = document.querySelector('li');
+    // console.log(targeting_document.parentNode);
 
-    let targeting_children = document.querySelector('ul');
-    console.log(targeting_children.children); //only target actual children tag
+    // let targeting_children = document.querySelector('ul');
+    // console.log(targeting_children.children); //only target actual children tag
+
+    let firstchild = document.getElementById('child');
+
+    console.log('Getting element as first child is ', firstchild.firstChild);
+    console.log('Getting element as first element is ', firstchild.firstElementChild);
+
+    console.log('Getting element as last child is ', firstchild.lastElementChild);
+    
+    
+    
 
 </script>
 </html>
