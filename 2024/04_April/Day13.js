@@ -18,7 +18,7 @@ class BinarySearchTree{
         return this.root === null;
     }
 
-    rootNode(val){
+    Node(val){
         let newNode = new Node(val)
         this.root === null ? this.root = newNode : this.insertNode(this.root, newNode)
     }
@@ -44,10 +44,10 @@ class BinarySearchTree{
 }
 
 const obj = new BinarySearchTree()
-obj.rootNode(12);
-obj.rootNode(7);
-obj.rootNode(15);
-obj.rootNode(5)
+obj.Node(12);
+obj.Node(7);
+obj.Node(15);
+obj.Node(5)
 console.log(obj.searchNode(obj.root, 17));
 
 // console.info(obj.isEmptyNode());
