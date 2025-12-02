@@ -1,20 +1,20 @@
 //NOTE: logic implementation of call, apply and bind
 
 const reusablefunction = {
-    display: function(){
-        return this.title + "-" + this.length;
-    }
-}
+  display: function () {
+    return this.title + "-" + this.length;
+  },
+};
 
 const musicObj = {
-    title: "Nepali Pop songs",
-    length: "12min"
-}
+  title: "Nepali Pop songs",
+  length: "12min",
+};
 
 const videoObj = {
-    title: "Nepali video",
-    length: "60min"
-}
+  title: "Nepali video",
+  length: "60min",
+};
 
 const extractDetailsandDisplay = reusablefunction.display.call(musicObj);
 const extractDetailsOfVideoandDisplay = reusablefunction.display.call(videoObj);
@@ -22,23 +22,40 @@ const extractDetailsOfVideoandDisplay = reusablefunction.display.call(videoObj);
 console.log(extractDetailsandDisplay);
 console.log(extractDetailsOfVideoandDisplay);
 
-
 //bind concept
 
 const existedObj = {
-    property1: "hello",
-    existedfunction: function (){
-        console.log("this is existed function and it can borrow by other")
-    }
+  property1: "hello",
+  existedfunction: function () {
+    console.log("this is existed function and it can borrow by other");
+  },
 };
 
 const newobject = {
-    filed: "field 1"
+  filed: "field 1",
 };
-
 
 //simply binding method makes a new function that derive from other function
 
 const bindingfunction = existedObj.existedfunction.bind(newobject);
 
-bindingfunction()
+bindingfunction();
+
+const obj3 = {
+  key1: "value1",
+  applyfn: function (param1, param2) {
+    console.log(this);
+    return (
+      "this function derived from apply concept and parameter are " +
+      param1 +
+      param2
+    );
+  },
+};
+
+const obj4 = {
+  key2: "value2",
+};
+
+const applyfnconcept = obj3.applyfn.apply(obj4, ["nischal", "codes"]);
+console.log(applyfnconcept);
