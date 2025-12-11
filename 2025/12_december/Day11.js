@@ -1,26 +1,46 @@
-//Exploring the power of prototype in js
-
-function GetStudentDetails(inp1, inp2) {
-  console.log("Inside constructor function ---- ", this);
-  console.log("This is delivering student details function");
-  this.inp1 = inp1;
-  this.inp2 = inp2;
+function Product(brand) {
+  this.brand = brand;
 }
 
-GetStudentDetails.prototype.heplerFn = function () {
-  console.log("This is hepler function");
+Product.prototype.details = function () {
+  console.log("Logging of the product ---- ", this.brand);
 };
 
-const response = new GetStudentDetails("nischal", "baniya");
-console.log(response);
-response.heplerFn();
+function ElectronicDevices(name) {
+  Product.call(this, name);
+}
 
-class GetStudentDetailsByClass {
-  constructor(inp1, inp2) {
-    this.inp1 = inp1;
-    this.inp2 = inp2;
+ElectronicDevices.prototype = Object.create(Product.prototype);
+ElectronicDevices.prototype.constructor = ElectronicDevices;
+
+const obj = new ElectronicDevices("Dell");
+obj.details();
+
+class ApproachByClass {
+  public_variable = "this is public variable and can access";
+  #private_varaible = "this is private and cannot access";
+
+  constructor(name) {
+    this.name = name;
+    console.log("Parent class");
+  }
+  details() {
+    console.log("This is details inside of class");
   }
 }
 
-const newObject = new GetStudentDetailsByClass("nischal", "baniya");
-console.log("Logging object --- ", newObject);
+class InheritanceConceptClass extends ApproachByClass {
+  constructor(name) {
+    super(name);
+  }
+
+  method_from_child() {
+    console.log("Accessing of public variable ---- ", this.public_variable);
+    // console.log("Accessing of private variable ---- ", this.#private_varaible);
+  }
+}
+
+const obj2 = new InheritanceConceptClass("nischal");
+console.log(obj2);
+obj2.method_from_child();
+obj2.details();
