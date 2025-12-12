@@ -26,6 +26,7 @@ class ApproachByClass {
   }
   details() {
     console.log("This is details inside of class");
+    console.log("Accessing of private variable ---- ", this.#private_varaible);
   }
 }
 
