@@ -8,7 +8,9 @@ const myObject = {
 }
 
 console.log(myObject);
+
 // hasOwnProperty that checks whether there is present of key or not in existed object
+
 console.log(myObject.hasOwnProperty("stack"));
 
 if(!myObject.hasOwnProperty("company")){
@@ -26,3 +28,5 @@ const notToChangeObject = Object.freeze({
 // notToChangeObject.email = "abc@gmail.com";
 
 console.log("Logging of the freeze object --- ", notToChangeObject);
+
+console.dir(notToChangeObject.constructor === Object);
