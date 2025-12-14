@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="294bdc66-d4a7-4123-a6e2-40f90995490b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/2025/12_december/Day12.js" beforeDir="false" afterPath="$PROJECT_DIR$/2025/12_december/Day12.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +18,9 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="7KLjHFxX" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="36jAdwn2surulzw1NEH91Hp4Nl0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,6 +30,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Node.js.Day12.js.executor": "Run",
+    "Node.js.Day14.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -45,12 +46,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.Day14.js">
     <configuration name="Day12.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day12.js" working-dir="$PROJECT_DIR$/2025/12_december">
+      <method v="2" />
+    </configuration>
+    <configuration name="Day14.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day14.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Day14.js" />
         <item itemvalue="Node.js.Day12.js" />
       </list>
     </recent_temporary>
@@ -66,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765509698476</updated>
       <workItem from="1765509699518" duration="7994000" />
+      <workItem from="1765727850796" duration="2130000" />
     </task>
     <servers />
   </component>
