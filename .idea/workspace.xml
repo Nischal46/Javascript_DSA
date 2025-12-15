@@ -31,6 +31,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Node.js.Day12.js.executor": "Run",
     "Node.js.Day14.js.executor": "Run",
+    "Node.js.Day15.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -46,15 +47,19 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.Day14.js">
+  <component name="RunManager" selected="Node.js.Day15.js">
     <configuration name="Day12.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day12.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
     <configuration name="Day14.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day14.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
+    <configuration name="Day15.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day15.js" working-dir="$PROJECT_DIR$/2025/12_december">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Day15.js" />
         <item itemvalue="Node.js.Day14.js" />
         <item itemvalue="Node.js.Day12.js" />
       </list>
@@ -71,7 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1765509698476</updated>
       <workItem from="1765509699518" duration="7994000" />
-      <workItem from="1765727850796" duration="2130000" />
+      <workItem from="1765727850796" duration="2614000" />
+      <workItem from="1765768725089" duration="3946000" />
     </task>
     <servers />
   </component>
