@@ -39,6 +39,7 @@
     &quot;Node.js.Day12.js.executor&quot;: &quot;Run&quot;,
     &quot;Node.js.Day14.js.executor&quot;: &quot;Run&quot;,
     &quot;Node.js.Day15.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.Day24.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -54,7 +55,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Node.js.Day15.js">
+  <component name="RunManager" selected="Node.js.Day24.js">
     <configuration name="Day12.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day12.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
@@ -64,8 +65,12 @@
     <configuration name="Day15.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day15.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
+    <configuration name="Day24.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day24.js" working-dir="$PROJECT_DIR$/2025/12_december">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Day24.js" />
         <item itemvalue="Node.js.Day15.js" />
         <item itemvalue="Node.js.Day14.js" />
         <item itemvalue="Node.js.Day12.js" />
@@ -87,6 +92,8 @@
       <workItem from="1765768725089" duration="4080000" />
       <workItem from="1765967024425" duration="31000" />
       <workItem from="1766044650229" duration="4948000" />
+      <workItem from="1766546990594" duration="4062000" />
+      <workItem from="1766754092155" duration="14000" />
     </task>
     <servers />
   </component>
