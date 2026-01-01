@@ -33,29 +33,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.Day12.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.Day14.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.Day15.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.Day24.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nischal/code/personal/work/Learning-rust&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/home/nischal/.config/JetBrains/RustRover2025.3/node/versions/24.12.0/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.runtime&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.Day1.js.executor": "Run",
+    "Node.js.Day12.js.executor": "Run",
+    "Node.js.Day14.js.executor": "Run",
+    "Node.js.Day15.js.executor": "Run",
+    "Node.js.Day24.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/nischal/code/personal/work/Learning-rust",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/home/nischal/.config/JetBrains/RustRover2025.3/node/versions/24.12.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "settings.javascript.runtime",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Node.js.Day24.js">
+}]]></component>
+  <component name="RunManager" selected="Node.js.Day1.js">
     <configuration name="Day12.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day12.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
@@ -65,11 +73,15 @@
     <configuration name="Day15.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day15.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
+    <configuration name="Day1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2026/01_January/Day1.js" working-dir="$PROJECT_DIR$/2026/01_January">
+      <method v="2" />
+    </configuration>
     <configuration name="Day24.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day24.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Day1.js" />
         <item itemvalue="Node.js.Day24.js" />
         <item itemvalue="Node.js.Day15.js" />
         <item itemvalue="Node.js.Day14.js" />
@@ -94,6 +106,7 @@
       <workItem from="1766044650229" duration="4948000" />
       <workItem from="1766546990594" duration="4062000" />
       <workItem from="1766754092155" duration="14000" />
+      <workItem from="1767282287024" duration="1631000" />
     </task>
     <servers />
   </component>
