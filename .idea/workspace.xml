@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="294bdc66-d4a7-4123-a6e2-40f90995490b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,7 @@
     "Node.js.Day12.js.executor": "Run",
     "Node.js.Day14.js.executor": "Run",
     "Node.js.Day15.js.executor": "Run",
+    "Node.js.Day2.js.executor": "Run",
     "Node.js.Day24.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -63,10 +66,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.Day1.js">
-    <configuration name="Day12.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day12.js" working-dir="$PROJECT_DIR$/2025/12_december">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Node.js.Day2.js">
     <configuration name="Day14.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day14.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
@@ -79,13 +79,16 @@
     <configuration name="Day24.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day24.js" working-dir="$PROJECT_DIR$/2025/12_december">
       <method v="2" />
     </configuration>
+    <configuration name="Day2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2026/01_January/Day2.js" working-dir="$PROJECT_DIR$/2026/01_January">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Day2.js" />
         <item itemvalue="Node.js.Day1.js" />
         <item itemvalue="Node.js.Day24.js" />
         <item itemvalue="Node.js.Day15.js" />
         <item itemvalue="Node.js.Day14.js" />
-        <item itemvalue="Node.js.Day12.js" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +109,8 @@
       <workItem from="1766044650229" duration="4948000" />
       <workItem from="1766546990594" duration="4062000" />
       <workItem from="1766754092155" duration="14000" />
-      <workItem from="1767282287024" duration="1631000" />
+      <workItem from="1767282287024" duration="2446000" />
+      <workItem from="1767364979044" duration="3738000" />
     </task>
     <servers />
   </component>
