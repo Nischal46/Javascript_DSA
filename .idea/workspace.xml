@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="294bdc66-d4a7-4123-a6e2-40f90995490b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -37,6 +37,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Coverage",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Node.js.Day1.js.executor": "Run",
     "Node.js.Day12.js.executor": "Run",
@@ -54,6 +56,7 @@
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/home/nischal/code/personal/work/Learning-rust",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,11 +66,12 @@
     "org.rust.first.attach.projects": "true",
     "settings.editor.selected.configurable": "settings.javascript.runtime",
     "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/nischal/code/personal/dsa/Javascript_DSA/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.Day2.js">
-    <configuration name="Day14.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day14.js" working-dir="$PROJECT_DIR$/2025/12_december">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Javascript_DSA/2026/01_January/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Day15.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/2025/12_december/Day15.js" working-dir="$PROJECT_DIR$/2025/12_december">
@@ -84,11 +88,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.Day2.js" />
         <item itemvalue="Node.js.Day1.js" />
         <item itemvalue="Node.js.Day24.js" />
         <item itemvalue="Node.js.Day15.js" />
-        <item itemvalue="Node.js.Day14.js" />
       </list>
     </recent_temporary>
   </component>
@@ -110,7 +114,8 @@
       <workItem from="1766546990594" duration="4062000" />
       <workItem from="1766754092155" duration="14000" />
       <workItem from="1767282287024" duration="2446000" />
-      <workItem from="1767364979044" duration="3738000" />
+      <workItem from="1767364979044" duration="4911000" />
+      <workItem from="1767446899353" duration="3982000" />
     </task>
     <servers />
   </component>
