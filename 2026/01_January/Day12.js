@@ -1,5 +1,4 @@
 //about asynchronous function concept
-
 const promiseProviderFn = new Promise((resolve, reject) => {
   if (2 + 2 === 4) {
     setTimeout(() => {
@@ -22,10 +21,20 @@ async function GetFnAsynchronously() {
   console.log("This is block due to await keyword");
 }
 
-GetFnAsynchronously();
+// GetFnAsynchronously();
 
 function GetFn1() {
   console.log("This is synchronous code");
+
+  promiseProviderFn
+    .then((res) => {
+      console.log("Resolved value:", res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  console.log("doesnot block in this and this log should be at top");
 }
 
 GetFn1();
