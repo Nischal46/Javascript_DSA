@@ -19,10 +19,27 @@ const obj2 = {
     lastName: "Johnson"
 }
 
-console.log(person1.fullName.call(obj2)); // Output: John Doe
+// console.log(person1.fullName.call(obj2)); // Output: John Doe
 
 
 
-// Using call to borrow fullName method from person1
-console.log(person1.fullName.call(person2, "passparam")); // Output: Jane Smith
+// // Using call to borrow fullName method from person1
+// console.log(person1.fullName.call(person2, "passparam")); // Output: Jane Smith
 
+const productArray = [
+    { name: "Laptop", price: 100000 },
+    { name: "Phone", price: 50000 },
+    { name: "Tablet", price: 30000 },
+    { name: "Monitor", price: 20000},
+    { name: "Laptop", price: 80000 },
+
+];
+
+const filterProduct = productArray.filter(cl => cl.name === "Tablet");
+console.log(filterProduct);
+
+const firstLaptopIndex = productArray.findIndex(cl => cl.name === "Laptop");
+console.log(firstLaptopIndex); // Output: 0
+
+const findLastIndexLaptop = productArray.findLastIndex(cl => cl.name === "Laptop");
+console.log(findLastIndexLaptop); // Output: 4
