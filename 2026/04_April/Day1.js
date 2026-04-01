@@ -48,3 +48,31 @@ Object.defineProperties(config, {
 console.log(config);
 
 console.log(Object.keys(config))  // ["apiUrl", "timeout"] - no _internal
+
+function ConstructorFunction() {
+  let privateVariable = "This is private";
+
+}
+
+const c_obj = new ConstructorFunction();
+console.log(c_obj);
+console.log(c_obj.privateVariable);
+
+//banking cli application 
+
+//factory function 
+function NBBankPortal(username, pin) {
+
+  //lot savedCustomerDetail = [{usern}]
+
+  let transaction = [];
+
+  function BankTransaction(type, amount) {
+    transaction.push({ username, type, amount, date: new Date() })
+  }
+
+  BankTransaction("saving", 2000)
+
+}
+
+NBBankPortal("nischal", 1234)
