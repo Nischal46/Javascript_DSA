@@ -68,11 +68,10 @@ function NBBankPortal(username, pin) {
   let transaction = [];
 
   function BankTransaction(type, amount) {
-    transaction.push({ username, type, amount, date: new Date() })
+    transaction.push({ username, type, amount, date: new Date() });
   }
 
-  BankTransaction("saving", 2000)
-
+  BankTransaction("saving", 2000);
 }
 
 NBBankPortal("nischal", 1234)
