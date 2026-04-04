@@ -28,6 +28,7 @@ function customfilterEvenOddFn(arr) {
 function useownFn(cb) {
   console.log("running callback inside it");
   cb([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  cb([34, 5, 6, 87, 66]);
 }
 
 useownFn(customfilterEvenOddFn);
