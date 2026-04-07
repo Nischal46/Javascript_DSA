@@ -43,3 +43,4 @@ const obj3 = {
 
 const derivedFromBind = obj1.checkfnDetails.bind(obj3);
 console.log("Logging of the bind concept as it returns function ---", derivedFromBind());
+
