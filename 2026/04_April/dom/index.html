@@ -7,32 +7,34 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h3>Dom manipulation - Day 9</h3>
+    <h3>Dom manipulation</h3>
 
     <button class="button1">Connect to server</button>
     <button class="button2">Button 2</button>
 
+    <div>
+      <p>Button Tracking</p>
+
+      <button>up</button>
+      <button class="btndown">down</button>
+      <button>left</button>
+      <button>right</button>
+
+    </div>
+
     <script>
 
-    let btn = document.querySelector(".button1");
+    let btndown = document.querySelector(".btndown");
 
-    async function longPollingConcept(){
-      const req = await fetch("http://localhost:3000", {
-        method: "GET"
-      });
-      const response = await req.json();
-
-      console.log("Logging of the response from the server -------", response);
-
-      setInterval(() => {
-        longPollingConcept();
-      }, 5000);
-    }
-
-    btn.addEventListener("click", async (e) => {
+    window.addEventListener("keydown", (e) => {
       e.preventDefault();
+      console.log("Event: ", e);
+     // alert("Key down has been pressed");
 
-      longPollingConcept();
+      if(e.key === "ArrowDown"){
+        console.log("You had pressed arrow down");
+        btndown.style.background = "red";
+      }
     })
     </script>
   </body>
