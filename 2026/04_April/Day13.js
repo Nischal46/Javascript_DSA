@@ -9,9 +9,9 @@ const obj2 = {
   a: 1
 };
 
-console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
+// console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
 
-console.log("Logging of the checking of the both object ---", Object.getPrototypeOf(obj1) === Object.getPrototypeOf(obj2));
+// console.log("Logging of the checking of the both object ---", Object.getPrototypeOf(obj1) === Object.getPrototypeOf(obj2));
 
 const unserializedArrays = {
   a: { a: { a: 1 } },
@@ -31,9 +31,23 @@ const serializeObjects = {
   f: "f"
 };
 
-console.log("Logging throuh object prototype ---", Object.getPrototypeOf(serializeObjects) === Object.getPrototypeOf(unserializedArrays));
+// console.log("Logging throuh object prototype ---", Object.getPrototypeOf(serializeObjects) === Object.getPrototypeOf(unserializedArrays));
 
-console.log(unserializedArrays);
+// console.log(unserializedArrays);
 
-console.log("----------------------Lodash---------------------------");
-console.log(isEqual(unserializedArrays, serializeObjects))
+// console.log("----------------------Lodash---------------------------");
+// console.log(isEqual(unserializedArrays, serializeObjects))
+
+function reusableMethod() {
+  console.log("This is method");
+  return `Name: ${this.name} - Email: ${this.email}`
+}
+
+const person1 = { name: "Nischal Baniya", email: "nisal@gmail.com" };
+person1.reusableMethod = reusableMethod;
+
+const person2 = { name: "Nischal Rust Dev", email: "nisal@dev.com" };
+
+const callMethod = person1.reusableMethod.call(person2);
+
+console.log("Logging of call method ---", callMethod);
