@@ -7,35 +7,23 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h3>Dom manipulation</h3>
-
-    <button class="button1">Connect to server</button>
-    <button class="button2">Button 2</button>
-
-    <div>
-      <p>Button Tracking</p>
-
-      <button>up</button>
-      <button class="btndown">down</button>
-      <button>left</button>
-      <button>right</button>
-
-    </div>
+    <h1>Server sent events</h1>
+    <ul id="events"></ul>
 
     <script>
+    const eventSource = new EventSource('http://localhost:3000/events');
 
-    let btndown = document.querySelector(".btndown");
+    //listening of the messages returning from Server
 
-    window.addEventListener("keydown", (e) => {
-      e.preventDefault();
-      console.log("Event: ", e);
-     // alert("Key down has been pressed");
+    eventSource.onmessage = function(event){
+      const newel = document.createElement("li");
+      newel.textContent = event.data;
+      document.getElementById("events").appendChild(newel);
+    }
 
-      if(e.key === "ArrowDown"){
-        console.log("You had pressed arrow down");
-        btndown.style.background = "red";
-      }
-    })
+    eventSource.onerror = function(event){
+      console.log("Error occured:", event);
+    }
     </script>
   </body>
 </html>
