@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.7.2",
+    "axios": "^1.15.2",
     "bcryptjs": "^2.4.3",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
@@ -33,11 +33,11 @@
     "prompt-sync": "^4.2.0",
     "puppeteer": "^22.14.0",
     "readline-sync": "^1.4.10",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^6.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.7",
-    "autocannon": "^8.0.0",
+    "autocannon": "^2.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.2"
   }
