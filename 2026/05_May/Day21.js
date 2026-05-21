@@ -10,7 +10,7 @@ class Queue {
   }
 
   isEmpty() {
-
+    return this.front === 0;
   }
 
   isFull() {
@@ -27,11 +27,24 @@ class Queue {
     this.rear += 1;
     this.count++;
   }
+
+  removeElement() {
+    if (this.isEmpty()) {
+      console.log("Queue is empty. Cannot remove in blank");
+      return
+    }
+
+    this.data[this.front] = undefined;
+    this.front += 1;
+  }
 }
 
 const queueAllocator = new Queue(3);
+console.log(queueAllocator.data.length);
+queueAllocator.removeElement();
 queueAllocator.addElement(3);
 queueAllocator.addElement(5);
 queueAllocator.addElement(7);
 queueAllocator.addElement(8);
+queueAllocator.removeElement();
 console.log("Logging of the queue: ", queueAllocator);
