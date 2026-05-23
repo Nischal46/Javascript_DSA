@@ -10,7 +10,7 @@ class Queue {
   }
 
   isEmpty() {
-    return this.front === 0;
+    return this.count === 0;
   }
 
   isFull() {
@@ -36,11 +36,13 @@ class Queue {
 
     this.data[this.front] = undefined;
     this.front += 1;
+    this.count--;
   }
 }
 
 const queueAllocator = new Queue(3);
-console.log(queueAllocator.data.length);
+console.log("At initial of queue: ", queueAllocator);
+//console.log(this.data.filter(Boolean));
 queueAllocator.removeElement();
 queueAllocator.addElement(3);
 queueAllocator.addElement(5);
