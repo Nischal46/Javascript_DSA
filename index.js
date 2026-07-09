@@ -15,7 +15,7 @@ app.get("/blocking", (req, res) => {
     console.log("This is blocking behaviour");
     const worker = new Worker("./worker.js", {
         workerData: {
-            limit: 10000000000
+            limit: 10000000000000000000
         }
     });
 
@@ -26,6 +26,14 @@ app.get("/blocking", (req, res) => {
             message: result.message
         })
     })
+
+    // for (let i = 1; i<100000000000000000; i++){
+
+    // }
+
+    // return res.json({
+    //     status: "success"
+    // })
 
 })
 
