@@ -1,41 +1,35 @@
-const express = require("express");
-const { Worker } = require("worker_threads");
-const app = express();
+// implementation of the double linked list
 
-app.get("/non-blocking", (req, res) => {
-    console.log("This is non blocking");
-    res.status(200).json({
-        status: "success",
-        message: "send from server"
-    })
-});
+class Node {
+    constructor(value) {
+        this.data = value;
+        this.prev = null;
+        this.next = null;
+    }
+}
 
+class DoubleLinkedList {
+    constructor(){
+        this.head = null;
+        this.tail = null;
+    }
 
-app.get("/blocking", (req, res) => {
-    console.log("This is blocking behaviour");
-    const worker = new Worker("./worker.js", {
-        workerData: {
-            limit: 10000000000000000000
+    append(value){
+        const newNode = new Node(value)
+        if(!this.head){
+            this.head = newNode;
+            this.tail = newNode;
+            return;
         }
-    });
+        this.tail.next = newNode;
+        newNode.prev = this.tail;
+        this.tail = newNode;
+    }
+}
 
-    worker.on("message", (result) => {
-        res.status(200).json({
-            status: "success",
-            result: result.data,
-            message: result.message
-        })
-    })
+const dll = new DoubleLinkedList();
+dll.append(34);
+dll.append(54);
+dll.append(65);
 
-    // for (let i = 1; i<100000000000000000; i++){
-
-    // }
-
-    // return res.json({
-    //     status: "success"
-    // })
-
-})
-
-
-app.listen(8000, () => console.log("App is running"));
+console.log(dll);
