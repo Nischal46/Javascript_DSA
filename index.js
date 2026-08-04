@@ -1,69 +1,44 @@
-
-let a = 1;
-
-let obj = {
-  a: 2,
-  b: 1
-};
+const readline = require("node:readline");
+const { BlockingThread } = require("./asynchronous/blocking.js");
 
 
-console.time("Extract from heap");
-console.log(obj.a);
-console.timeEnd("Extract from heap");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-console.time("Extract from stack");
-console.log(a);
-console.timeEnd("Extract from stack");
+async function AskingName() {
+  console.log("Asking name here called");
+  const res = await rl.question("What is your input", name => {
+    console.log("Hello, ", name);
+    rl.close();
 
-let abc = undefined;
-
-console.log("abc: ", abc);
-
-function add (a, b) {
-  console.log(`a: ${a} | b: ${b}`);
-  let c = a + b;
-
-  console.log(c);
-  return c;
+    return res;
+  });
 }
 
-add();
-
-let obj1 = {
-  name: "nischal",
-  fullname: null 
+function HeavyFetching() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("data resolved and fetched", 1000));
+  });
 }
 
-console.log("obj1: -> ", obj1);
-console.log("fullname: -> ", obj1.fullname);
+async function run() {
+  console.log("step 1 executed");
 
-let array1 = [1,2,3];
-let array2 = [1,2,3];
+  const result = await HeavyFetching();
 
-console.log(array1 === array2);
+  console.log("step 2 ", result);
 
-let obj2 = {
-  a: 1,
-  b: 2
-}, obj3 = {
-  a: 1,
-  b: 2
-};
+  AskingName();
 
-console.log("checking object: ", obj2 === obj3);
+  console.log("step 3 executed");
+}
 
-let empobj1 = {}, empobj2 = {};
+run();
+console.log("Outside of the stack run before resolving of the promise");
 
-console.log("Checking empty obj: ", empobj1 === empobj2);
+BlockingThread();
 
-let thinsconceptinObj = {
-  product: "laptop",
-  price: 68000,
-
-  calculatePrice() {
-    return `${this.product} costs rs ${this.price}`
-  }
-};
-
-console.log("Inspect does this work or not: ", thinsconceptinObj);
-console.log("triggering calculate price: ", thinsconceptinObj.calculatePrice());
+console.log("Logging at last after all task gets executed");
+console.log(Object.prototype);
