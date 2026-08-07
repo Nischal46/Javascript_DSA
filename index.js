@@ -1,44 +1,62 @@
-const readline = require("node:readline");
-const { BlockingThread } = require("./asynchronous/blocking.js");
+//concept of block scope variable
 
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-async function AskingName() {
-  console.log("Asking name here called");
-  const res = await rl.question("What is your input", name => {
-    console.log("Hello, ", name);
-    rl.close();
-
-    return res;
-  });
+function heavycomputation() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Promise resolved..."), 0);
+  })
 }
 
-function HeavyFetching() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve("data resolved and fetched", 1000));
-  });
+const res = heavycomputation();
+console.log("Logging of the res ----- ", res);
+
+var a = 2;
+
+function changeglobalvariablevalue() {
+  var a = 3;
+  var b = 5;
+  console.log("inside a: ", a);
 }
 
-async function run() {
-  console.log("step 1 executed");
+changeglobalvariablevalue();
 
-  const result = await HeavyFetching();
-
-  console.log("step 2 ", result);
-
-  AskingName();
-
-  console.log("step 3 executed");
+function anotherfunctiondefined() {
+  console.log(b);
 }
 
-run();
-console.log("Outside of the stack run before resolving of the promise");
+anotherfunctiondefined();
 
-BlockingThread();
+console.log(a);
+console.log("logging from outside b: ", b);
 
-console.log("Logging at last after all task gets executed");
-console.log(Object.prototype);
+var b = 5;
+
+console.log(this);
+
+function spreadacceptingargs(x, y, ...z) {
+  console.log("val of first param x: ", x),
+    console.log("value of second param y: ", y);
+  console.log("value of remaining val in param z: ", z);
+}
+
+spreadacceptingargs(2, 3, 4, 5, 6, 34);
+
+console.log("Logging res at final: ", res.then(cl => cl));
+
+let availablevar = 123;
+
+this.name = "Global";
+
+let objcon = {
+  name: "Nischal",
+  detailsfromnormalfn: function () {
+    console.log("Hello hello ", this.name)
+  },
+
+  detailsfromarrowfn: () => {
+    console.log("Sure its returns undefined: ", this.name);
+    console.log("But it takes from outer global var if we point this: ", this.availablevar);
+  }
+}
+
+objcon.detailsfromnormalfn();
+objcon.detailsfromarrowfn();
