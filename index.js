@@ -1,6 +1,6 @@
 //concept for blocking and non blocking of the threads
 
-import express from "express";
+import express, { json } from "express";
 import bcrypt from "bcryptjs";
 import fs from "fs";
 import userJSONRecord from "./files/userRecord.json" with {type: "json"};
@@ -109,6 +109,53 @@ app.post("/password-encrypt", async (req, res, next) => {
     status: "success",
     message: "successfully password encrypt"
   })
+})
+
+app.put("/useredit/:id", (req, res) => {
+  const id = req.params.id;
+  const { name, email } = req.body;
+
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      return res.json({
+        status: "error",
+        message: err.message
+      })
+    }
+
+    let rawRecordsParsed = JSON.parse(data || "[]");
+
+    rawRecordsParsed = rawRecordsParsed.reduce((acc, cur) => {
+      if (cur.id === +id) {
+        cur.name = name;
+        cur.email = email;
+
+      }
+      acc.push(cur);
+
+      return acc;
+    }, []);
+
+    console.log("rawrecords: ", rawRecordsParsed);
+
+    fs.writeFile(filePath, JSON.stringify(rawRecordsParsed, null, 2), (err) => {
+      if (err) {
+        return res.json({
+          status: "error",
+          message: err.message
+        })
+      }
+
+      else {
+        return res.json({
+          status: "success",
+          message: "User data updated successfully"
+        })
+      }
+    });
+
+  })
+
 })
 
 app.listen(8000, () => console.log("Server already started"))
